@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Snowball_plan" parent="Theme.Material3.DayNight.NoActionBar"></style>
+
+    <style name="Theme.Snowball_plan" parent="Base.Theme.Snowball_plan" />
+
+    <!-- 消除边框自带阴影 -->
+    <attr name="borderlessButtonStyle" format="reference" />
+
+    <style name="TabLayoutTextSize">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

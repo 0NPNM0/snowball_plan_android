@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="69dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <!-- 年 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/id_tab_year">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tab_year"
+                android:id="@+id/tab_iv_year"></ImageView>
+        </LinearLayout>
+
+        <!-- 月 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/id_tab_month">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tab_month"
+                android:id="@+id/tab_iv_month"></ImageView>
+        </LinearLayout>
+
+        <!-- 日 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/id_tab_day">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tab_day"
+                android:id="@+id/tab_iv_day"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

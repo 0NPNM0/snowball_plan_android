@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">snowball_plan</string>
+    <string name="logo_font_type">Snowballplan</string>
+    <string name="build">新建</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+    <string name="eleven">11</string>
+    <string name="twelve">12</string>
+    <string name="two_zero_two_zero">2020</string>
+    <string name="two_zero_two_one">2021</string>
+    <string name="two_zero_two_two">2022</string>
+    <string name="two_zero_two_three">2023</string>
+    <string name="two_zero_two_four">2024</string>
+    <string name="two_zero_two_five">2025</string>
+    <string name="two_zero_two_six">2026</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_vpfragment_year">VPFragmentYearActivity</string>
+    <string name="first_fragment_label">first_fragment_label</string>
+    <string name="second_fragment_label">second_fragment_label</string>
+
+    <string name="new_plan">新建计划</string>
+    <string name="plan_month">计划月份</string>
+    <string name="plan_type">计划类别</string>
+    <string name="plan_list">计划清单</string>
+    <string name="color_title">颜色</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+
+
+
+</resources>
