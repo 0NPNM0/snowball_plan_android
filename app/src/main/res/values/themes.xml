@@ -11,4 +11,13 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+
+    <style name="yearBuildDialog" parent="android:style/Theme.Dialog">
+        <!--        将标题去掉-->
+        <item name="android:windowNoTitle">true</item>
+        <!--        将背景设置为透明颜色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
 </resources>

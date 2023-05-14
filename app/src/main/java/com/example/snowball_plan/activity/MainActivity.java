@@ -10,14 +10,18 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -29,6 +33,7 @@ import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
 import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
 import com.example.snowball_plan.fragment.YearCellFragment;
+import com.example.snowball_plan.tools.YearDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -42,13 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LinearLayout llYear,llMonth,llDay;
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
-
-    //年内fragment参数
-    private ViewPager mViewPagerMonth;
-    private TabLayout mtablayoutYear;
-    private List<Fragment> fragmentListYear;
-    private List<String> mTitleListYear;
-    private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +66,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initTabView();
         initPager();
 
+        //新建按钮
+        findViewById(R.id.build).setOnClickListener(this::onClickBuild);
+    }
 
+    //新建任务
+    private void onClickBuild(View view) {
+        YearDialog yearDialog = new YearDialog(this,R.style.yearBuildDialog);
+        yearDialog.show();
     }
 
 

@@ -74,7 +74,6 @@
         android:layout_width="match_parent"
         android:layout_height="585dp"></androidx.viewpager2.widget.ViewPager2>
 
-
     <!-- 底部新建按钮 -->
     <android.widget.Button
         android:id="@+id/build"
@@ -86,8 +85,6 @@
         android:background="@color/grey"
         android:text="@string/build"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        android:onClick="toInsertActivity"></android.widget.Button>
-
+        android:textSize="30sp"></android.widget.Button>
 
 </LinearLayout>
