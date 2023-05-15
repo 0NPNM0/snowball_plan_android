@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="Base.Theme.Snowball_plan" parent="Theme.Material3.DayNight.NoActionBar"></style>
 
@@ -18,6 +18,13 @@
         <!--        将背景设置为透明颜色-->
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
+
+    <!--复选框颜色-->
+    <style name="CheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/red</item>
+    </style>
+
 
 
 </resources>

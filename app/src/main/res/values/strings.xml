@@ -38,6 +38,19 @@
     <string name="yes">确定</string>
     <string name="no">取消</string>
 
+    <string name="ione">1月</string>
+    <string name="itwo">2月</string>
+    <string name="ithree">3月</string>
+    <string name="ifour">4月</string>
+    <string name="ifive">5月</string>
+    <string name="isix">6月</string>
+    <string name="iseven">7月</string>
+    <string name="ieight">8月</string>
+    <string name="inine">9月</string>
+    <string name="iten">10月</string>
+    <string name="ieleven">11月</string>
+    <string name="itwelve">12月</string>
+    <string name="spinner_month_hint">请选择该任务的月份</string>
 
 
 </resources>

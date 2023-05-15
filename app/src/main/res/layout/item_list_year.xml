@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="160dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:columnCount="3"
+    android:rowCount="4">
+
+    <CheckBox
+        android:id="@+id/ione"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="@string/ione"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/itwo"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/itwo"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/ithree"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/ithree"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/ifour"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="@string/ifour"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/ifive"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/ifive"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/isix"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/isix"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/iseven"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="@string/iseven"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/ieight"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/ieight"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/inine"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/inine"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/iten"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/iten"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/ieleven"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/ieleven"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/itwelve"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/itwelve"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:theme="@style/CheckBox"></CheckBox>
+
+</GridLayout>

@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="grey">#C4C4C4</color>\
-    <color name="red">#C85353</color>
+
     <color name="light_grey">#F5F5F5</color>
+
+    <!--颜色选择器-->
+    <color name="o_one">#D84242</color>
+    <color name="red">#C85353</color>
+    <color name="o_three">#E08994</color>
+    <color name="o_four">#F8B5BE</color>
+    <color name="o_five">#FFD9DD</color>
+
+    <color name="t_one">#DF8E00</color>
+    <color name="t_two">#DA9F38</color>
+    <color name="t_three">#E8B968</color>
+    <color name="t_four">#F8D79F</color>
+    <color name="t_five">#FFEAC6</color>
+
+    <color name="th_one">#E2C602</color>
+    <color name="th_two">#E8D64F</color>
+    <color name="th_three">#E9DA6D</color>
+    <color name="th_four">#F1E8A4</color>
+    <color name="th_five">#FAF6D9</color>
+
+    <color name="f_one">#008409</color>
+    <color name="f_two">#289B30</color>
+    <color name="f_three">#62BA5B</color>
+    <color name="f_four">#8BD46B</color>
+    <color name="f_five">#BAE3A8</color>
+
+    <color name="fi_one">#2C63C8</color>
+    <color name="fi_two">#4E7CD0</color>
+    <color name="fi_three">#7D9FDD</color>
+    <color name="fi_four">#A5BDEA</color>
+    <color name="fi_five">#C2D4F5</color>
+
+    <color name="s_one">#7E40B4</color>
+    <color name="s_two">#9749D8</color>
+    <color name="s_three">#BD84ED</color>
+    <color name="s_four">#D4A4FB</color>
+    <color name="s_five">#E7C9FF</color>
+
+    <color name="black">#000000</color>
+    <color name="se_two">#9E9999</color>
+    <color name="grey">#C4C4C4</color>
+    <color name="se_four">#E0E0E0</color>
+    <color name="white">#FFFFFF</color>
+
+
+
 </resources>

@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -22,6 +24,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,6 +41,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -48,9 +52,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //状态栏设置
         setStatusBar();
 
         super.onCreate(savedInstanceState);
@@ -68,12 +74,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //新建按钮
         findViewById(R.id.build).setOnClickListener(this::onClickBuild);
+
     }
 
     //新建任务
     private void onClickBuild(View view) {
-        YearDialog yearDialog = new YearDialog(this,R.style.yearBuildDialog);
-        yearDialog.show();
+
+        if(ivCurrent == ivYear){
+            YearDialog yearDialog = new YearDialog(this,R.style.yearBuildDialog);
+            yearDialog.show();
+        }
+
     }
 
 
