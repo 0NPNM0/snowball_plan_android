@@ -29,7 +29,6 @@
             android:layout_weight="1"
             android:layout_gravity="center"
             android:orientation="vertical"
-
             android:id="@+id/id_tab_year">
             <ImageView
                 android:layout_width="40dp"

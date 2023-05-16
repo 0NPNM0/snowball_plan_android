@@ -85,8 +85,8 @@
 
             <include
                 layout="@layout/color_selector"
-                android:layout_width="250dp"
-                android:layout_height="280dp"
+                android:layout_width="260dp"
+                android:layout_height="350dp"
                 android:layout_gravity="center"></include>
 
             <LinearLayout

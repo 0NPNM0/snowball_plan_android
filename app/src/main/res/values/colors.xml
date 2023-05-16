@@ -2,6 +2,7 @@
 <resources>
 
     <color name="light_grey">#F5F5F5</color>
+    <color name="black">#000000</color>
 
     <!--颜色选择器-->
     <color name="o_one">#D84242</color>
@@ -40,7 +41,7 @@
     <color name="s_four">#D4A4FB</color>
     <color name="s_five">#E7C9FF</color>
 
-    <color name="black">#000000</color>
+    <color name="se_one">#787878</color>
     <color name="se_two">#9E9999</color>
     <color name="grey">#C4C4C4</color>
     <color name="se_four">#E0E0E0</color>
