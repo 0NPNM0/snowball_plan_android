@@ -33,6 +33,7 @@ public class VPYearFragment extends Fragment {
     private List<String> mTitleListYear;
     private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
 
+
     public VPYearFragment() {
         // Required empty public constructor
     }

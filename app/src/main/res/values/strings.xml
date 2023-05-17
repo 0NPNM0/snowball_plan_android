@@ -50,7 +50,13 @@
     <string name="iten">10月</string>
     <string name="ieleven">11月</string>
     <string name="itwelve">12月</string>
-    <string name="spinner_month_hint">请选择该任务的月份</string>
 
+    <string name="plan_with_month">5月计划</string>
+    <string name="database">数据库</string>
+    <string name="task">听力
+阅读
+翻译
+写作</string>
+    <string name="direct_month">5月， 6月</string>
 
 </resources>
