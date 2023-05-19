@@ -61,6 +61,8 @@ public class VPYearFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_v_p_year, container, false);
+
+
     }
 
     @Override

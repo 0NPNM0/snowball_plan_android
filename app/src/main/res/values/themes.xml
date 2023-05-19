@@ -25,6 +25,25 @@
         <item name="colorControlActivated">@color/red</item>
     </style>
 
+    <!--日期选择器-->
+    <style name="ThemeDialog" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/red</item>
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryDark">@color/grey</item>
+
+<!--        <item name="android:headerBackground">@color/red</item>-->
+<!--        <item name="android:yearListSelectorColor">@color/light_grey</item>-->
+    </style>
+
+    <!--滚动条-->
+    <style name="recy_vertical_style">
+        <item name="android:scrollbarSize">8dp</item>
+        <item name="android:scrollbars">vertical</item>
+<!--        短条-->
+        <item name="android:scrollbarThumbVertical">@drawable/recy_vertical_scrollbar</item>
+<!--        长条-->
+        <item name="android:scrollbarTrackVertical">@drawable/tical_scrollbar_bgrecy_ver</item>
+    </style>
 
 
 </resources>

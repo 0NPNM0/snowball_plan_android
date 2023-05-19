@@ -58,5 +58,7 @@
 翻译
 写作</string>
     <string name="direct_month">5月， 6月</string>
+    <string name="now">当前：</string>
+    <string name="jumpto">跳转</string>
 
 </resources>

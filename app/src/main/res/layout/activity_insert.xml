@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="620dp"
     tools:context=".activity.InsertActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    style="@style/recy_vertical_style">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scoll_year"
@@ -52,6 +53,9 @@
                 android:layout_marginTop="10dp"></TextView>
 
             <EditText
+                android:id="@+id/year_task_type"
+                android:text=""
+                android:textColor="@color/black"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -68,6 +72,9 @@
                 android:layout_marginTop="10dp"></TextView>
 
             <EditText
+                android:id="@+id/year_task_list"
+                android:text=""
+                android:textColor="@color/black"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:background="@color/white"

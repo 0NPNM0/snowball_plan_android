@@ -13,7 +13,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -24,7 +26,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,7 +37,9 @@ import android.widget.Toast;
 import com.example.snowball_plan.R;
 import com.example.snowball_plan.adapter.MyFragmentPagerAdapter;
 import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
+import com.example.snowball_plan.database.MyDatabaseHelper;
 import com.example.snowball_plan.fragment.BlankFragment;
+import com.example.snowball_plan.fragment.DayFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
 import com.example.snowball_plan.fragment.YearCellFragment;
 import com.example.snowball_plan.tools.YearDialog;
@@ -44,6 +50,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     //年外fragment参数
@@ -52,6 +60,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
 
+    private MyDatabaseHelper myDatabaseHelper;
+//    private MyDatabaseHelper myDatabaseHelper_t;
+
+    private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
+    private EditText year_task_type,year_task_list,year_task_color;
+
+    private CheckBox ione,itwo,ithree,ifour,ifive,isix,iseven,ieight,inine,iten,ieleven,itwelve;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SQLiteStudioService.instance().start(this);
 
         //logo字体设置
         TextView logo = findViewById(R.id.logo);
@@ -85,6 +101,93 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             yearDialog.show();
         }
 
+        myDatabaseHelper = new MyDatabaseHelper(this,"sbp.db",null,1);
+//        myDatabaseHelper_t = new MyDatabaseHelper(this,"test.db",null,1);
+        SQLiteDatabase db =myDatabaseHelper.getWritableDatabase();
+
+
+//
+//        ContentValues values_year = new ContentValues();
+//        ContentValues values_month = new ContentValues();
+//        ContentValues values_task_type = new ContentValues();
+//        ContentValues values_task_list = new ContentValues();
+//        ContentValues values_task_color = new ContentValues();
+//        ContentValues values_task = new ContentValues();
+//
+//        ione = findViewById(R.id.ione);
+//        itwo = findViewById(R.id.itwo);
+//        ithree = findViewById(R.id.ithree);
+//        ifour = findViewById(R.id.ifour);
+//        ifive = findViewById(R.id.ifive);
+//        isix = findViewById(R.id.isix);
+//        iseven = findViewById(R.id.iseven);
+//        ieight = findViewById(R.id.ieight);
+//        inine = findViewById(R.id.inine);
+//        iten = findViewById(R.id.iten);
+//        ieleven = findViewById(R.id.ieleven);
+//        itwelve = findViewById(R.id.itwelve);
+//
+//        String plan_month = "";
+//
+//        if(ione.isSelected() == true){
+//            plan_month += "1月,";
+//        }
+//        if(itwo.isSelected() == true){
+//            plan_month += "2月,";
+//        }
+//        if(ithree.isSelected() == true){
+//            plan_month += "3月,";
+//        }
+//        if(ifour.isSelected() == true){
+//            plan_month += "4月,";
+//        }
+//        if(ifive.isSelected() == true){
+//            plan_month += "5月,";
+//        }
+//        if(isix.isSelected() == true){
+//            plan_month += "6月,";
+//        }
+//        if(iseven.isSelected() == true){
+//            plan_month += "7月,";
+//        }
+//        if(ieight.isSelected() == true){
+//            plan_month += "8月,";
+//        }
+//        if(inine.isSelected() == true){
+//            plan_month += "9月,";
+//        }
+//        if(iten.isSelected() == true){
+//            plan_month += "10月,";
+//        }
+//        if(ieleven.isSelected() == true){
+//            plan_month += "11月,";
+//        }
+//        if(itwelve.isSelected() == true){
+//            plan_month += "12月,";
+//        }
+
+        //计划的年份
+//        values_year.put("year_type", String.valueOf(myFragmentStateVPAdapter.getItem(R.id.tab_layout_year)));
+//        db.insert("year_type",null,values_year);
+//
+//        //计划月份
+//        values_month.put("task_type",plan_month);
+//        db.insert("task_type",null,values_month);
+
+
+//        //计划类别
+//        year_task_type = findViewById(R.id.year_task_type);
+//        String ytt = String.valueOf(year_task_type.getText());
+//        values_task_type.put("task_type",ytt);
+//
+//        //计划清单
+//        year_task_list = findViewById(R.id.year_task_list);
+//        String yyl = String.valueOf(year_task_list.getText());
+//        values_task_list.put("task_list",yyl);
+
+        //计划颜色
+//        YearDialog yearDialog = new YearDialog();
+//        year_task_color = findViewById()
     }
 
 
@@ -93,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(VPYearFragment.newInstance("年",""));
         fragments.add(BlankFragment.newInstance("月",""));
-        fragments.add(BlankFragment.newInstance("日",""));
+        fragments.add(DayFragment.newInstance("日",""));
 
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),getLifecycle(),fragments);
         mviewPagerYear.setAdapter(myFragmentPagerAdapter);
