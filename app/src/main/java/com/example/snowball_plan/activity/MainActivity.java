@@ -42,6 +42,7 @@ import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.DayFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
 import com.example.snowball_plan.fragment.YearCellFragment;
+import com.example.snowball_plan.tools.DayDialog;
 import com.example.snowball_plan.tools.YearDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -97,8 +98,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void onClickBuild(View view) {
 
         if(ivCurrent == ivYear){
-            YearDialog yearDialog = new YearDialog(this,R.style.yearBuildDialog);
+            YearDialog yearDialog = new YearDialog(this,R.style.BuildDialog);
             yearDialog.show();
+        }
+
+        if(ivCurrent == ivDay){
+            DayDialog dayDialog = new DayDialog(this,R.style.BuildDialog);
+            dayDialog.show();
         }
 
         myDatabaseHelper = new MyDatabaseHelper(this,"sbp.db",null,1);

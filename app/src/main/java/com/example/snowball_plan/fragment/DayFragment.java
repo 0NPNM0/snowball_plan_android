@@ -99,13 +99,13 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
             button_yes.setText("确定");
             button_yes.setTextSize(20);
 //            button_yes.setBackgroundResource(R.color.grey);
-            button_yes.setTextColor(getResources().getColor(R.color.red));
+            button_yes.setTextColor(getResources().getColor(R.color.black));
 
 
             Button button_no = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
             button_no.setText("取消");
             button_no.setTextSize(20);
-            button_no.setTextColor(getResources().getColor(R.color.red));
+            button_no.setTextColor(getResources().getColor(R.color.black));
 //            button_no.setBackgroundResource(R.color.grey);
         }
     }
