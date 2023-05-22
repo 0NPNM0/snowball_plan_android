@@ -2,27 +2,36 @@ package com.example.snowball_plan.entity;
 
 public class DayPlan {
 
+    public String date;
     public String start_time;
     public String end_time;
     public String type;
     public String list;
-    public String repeat;
-    public String conflictp;
-    public String color;
-    public String overtime;
+    public int color;
 
-    public DayPlan(String start_time, String end_time, String type, String list, String repeat, String conflictp, String color, String overtime) {
+//    public String repeat;
+//    public String conflictp;
+//    public String overtime;
+
+
+    public DayPlan() {
+    }
+
+    public DayPlan(String date, String start_time, String end_time, String type, String list, int color) {
+        this.date = date;
         this.start_time = start_time;
         this.end_time = end_time;
         this.type = type;
         this.list = list;
-        this.repeat = repeat;
-        this.conflictp = conflictp;
         this.color = color;
-        this.overtime = overtime;
     }
 
-    public DayPlan() {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getStart_time() {
@@ -57,49 +66,23 @@ public class DayPlan {
         this.list = list;
     }
 
-    public String getRepeat() {
-        return repeat;
-    }
-
-    public void setRepeat(String repeat) {
-        this.repeat = repeat;
-    }
-
-    public String getConflict() {
-        return conflictp;
-    }
-
-    public void setConflict(String conflictp) {
-        this.conflictp = conflictp;
-    }
-
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
-    }
-
-    public String getOvertime() {
-        return overtime;
-    }
-
-    public void setOvertime(String overtime) {
-        this.overtime = overtime;
     }
 
     @Override
     public String toString() {
         return "DayPlan{" +
-                "start_time='" + start_time + '\'' +
+                "date='" + date + '\'' +
+                ", start_time='" + start_time + '\'' +
                 ", end_time='" + end_time + '\'' +
                 ", type='" + type + '\'' +
                 ", list='" + list + '\'' +
-                ", repeat='" + repeat + '\'' +
-                ", conflictp='" + conflictp + '\'' +
-                ", color='" + color + '\'' +
-                ", overtime='" + overtime + '\'' +
+                ", color=" + color +
                 '}';
     }
 }

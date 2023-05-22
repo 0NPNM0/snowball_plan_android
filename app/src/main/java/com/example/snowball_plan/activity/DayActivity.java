@@ -1,27 +1,36 @@
-package com.example.snowball_plan.tools;
+package com.example.snowball_plan.activity;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Switch;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
 import com.example.snowball_plan.R;
-import com.example.snowball_plan.database.DayDBHelper;
+import com.example.snowball_plan.database.DayPlanDBHelper;
 import com.example.snowball_plan.entity.DayPlan;
+import com.example.snowball_plan.tools.ColorSelector;
+import com.example.snowball_plan.tools.DateUtil;
 
+import java.util.Calendar;
 
-public class DayDialog extends Dialog {
+public class DayActivity extends AppCompatActivity implements View.OnClickListener,DatePickerDialog.OnDateSetListener{
 
-    private  final Button yes_day;
-    private  final Button no_day;
+    private  Button yes_day;
+    private   Button no_day;
 
     private Button tab1, tab2, tab3, tab4, tab5,
             tab6, tab7, tab8, tab9, tab10,
@@ -34,17 +43,36 @@ public class DayDialog extends Dialog {
 
     private TimePicker timepicker_start;
     private TimePicker timepicker_end;
-    private Context context;
 
-    private EditText day_task_type, day_task_list, day_task_repeat, day_task_conflict;
-    private Switch overtime;
+    private EditText day_task_type, day_task_list;
 
-    private DayDBHelper mDBHelper;
+    private TextView tv_date;
+    private Calendar calendar;
+    private ImageView add;
+
+    private DayPlanDBHelper dbHelper;
+
+    private ColorSelector colorSelector;
 
 
-    public DayDialog(@NonNull Context context, int themeResId) {
-        super(context, themeResId);
-        setContentView(R.layout.activity_insert_day);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_day);
+
+        setStatusBar();
+
+        tv_date = findViewById(R.id.tv_date);
+        calendar = Calendar.getInstance();
+        tv_date.setText(DateUtil.getDate(calendar));
+        add = findViewById(R.id.add);
+        add.setOnClickListener(this);
+        colorSelector = new ColorSelector();
+
+        dbHelper = DayPlanDBHelper.getInstance(this);
+        dbHelper.openReadLink();
+        dbHelper.openWriteLink();
+
 
         yes_day = findViewById(R.id.yes_day);
         no_day = findViewById(R.id.no_day);
@@ -55,20 +83,16 @@ public class DayDialog extends Dialog {
             public void onClick(View v) {
 
                 DayPlan dayPlan = new DayPlan();
+                dayPlan.date = tv_date.getText().toString();
                 dayPlan.start_time = timepicker_start.getHour()+":"+timepicker_start.getMinute();
                 dayPlan.end_time = timepicker_end.getHour()+":"+timepicker_end.getMinute();
                 dayPlan.type = day_task_type.getText().toString();
                 dayPlan.list = day_task_list.getText().toString();
-                dayPlan.repeat = day_task_repeat.getText().toString();
-                dayPlan.conflictp = day_task_conflict.getText().toString();
-                dayPlan.color = String.valueOf(isCurrent.getTextColors());
+                dayPlan.color = colorSelector.Selector(isCurrent.getId());
 
-                if(overtime.isChecked() == true) dayPlan.overtime = String.valueOf(true);
-                else dayPlan.overtime = String.valueOf(false);
-
-                if(mDBHelper.save(dayPlan) > 0){
-                    Toast.makeText(context,"添加计划成功!",Toast.LENGTH_SHORT).show();
-                    dismiss();
+                if(dbHelper.save(dayPlan) > 0){
+                    Toast.makeText(getApplicationContext(),"添加计划成功！",Toast.LENGTH_SHORT).show();
+//                    dismiss();
                 }
             }
         });
@@ -76,7 +100,7 @@ public class DayDialog extends Dialog {
         no_day.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dismiss(); //让对话框消失
+//                dismi(); //让对话框消失
             }
         });
 
@@ -108,13 +132,7 @@ public class DayDialog extends Dialog {
 
         day_task_type = findViewById(R.id.day_task_type);
         day_task_list = findViewById(R.id.day_task_list);
-        day_task_repeat = findViewById(R.id.day_task_repeat);
-        day_task_conflict = findViewById(R.id.day_task_conflict);
-        overtime = findViewById(R.id.overtime_tick);
 
-        mDBHelper = DayDBHelper.getInstance(this.getContext());
-        mDBHelper.openReadLink();
-        mDBHelper.openWriteLink();
 
 
         //颜色选择器
@@ -828,11 +846,6 @@ public class DayDialog extends Dialog {
         });
     }
 
-    //关闭连接
-    protected void onDestory(){
-        mDBHelper.closeLink();
-    }
-
     //取消NestedScrollView和EditText冲突
     private void initScrollHandler() {
         View mEditOpinionContent = findViewById(R.id.scoll_year);
@@ -851,5 +864,64 @@ public class DayDialog extends Dialog {
         });
     }
 
+    @Override
+    public void onClick(View v) {
+        if(R.id.add == v.getId()){
+            DatePickerDialog dialog =new DatePickerDialog(this, R.style.ThemeDialog,this,
+                    calendar.get(Calendar.YEAR),
+                    calendar.get(Calendar.MONTH),
+                    calendar.get(Calendar.DAY_OF_MONTH));
+            dialog.show();
 
+            Button button_yes = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+            button_yes.setText("确定");
+            button_yes.setTextSize(20);
+            button_yes.setTextColor( getResources().getColor(R.color.black));
+
+
+            Button button_no = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+            button_no.setText("取消");
+            button_no.setTextSize(20);
+            button_no.setTextColor(getResources().getColor(R.color.black));
+        }
+    }
+
+
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month);
+        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        tv_date.setText(DateUtil.getDate(calendar));
+    }
+
+    //状态栏设置
+    //是否使用特殊的标题栏背景颜色，android5.0以上可以设置状态栏背景色，如果不使用则使用透明色值
+    public boolean useThemestatusBarColor = true;
+    //是否使用状态栏文字和图标为暗色，如果状态栏采用了白色系，则需要使状态栏和图标为暗色，android6.0以上可以设置
+    public boolean useStatusBarColor = true;
+
+    public void setStatusBar() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//5.0及以上
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            //根据上面设置是否对状态栏单独设置颜色
+            if (useThemestatusBarColor) {
+                getWindow().setStatusBarColor(getResources().getColor(R.color.light_grey));//设置状态栏背景色
+            } else {
+                getWindow().setStatusBarColor(Color.TRANSPARENT);//透明
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {//4.4到5.0
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        } else {
+            Toast.makeText(this, "低于4.4的android系统版本不存在沉浸式状态栏", Toast.LENGTH_SHORT).show();
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && useStatusBarColor) {//android6.0以后可以对状态栏文字颜色和图标进行修改
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+
+    }
 }

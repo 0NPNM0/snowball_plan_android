@@ -11,7 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.Constraints;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.PagerTabStrip;
+import androidx.viewpager.widget.ViewPager;
 
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,12 +23,18 @@ import android.view.WindowManager;
 import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.example.snowball_plan.R;
+import com.example.snowball_plan.adapter.DayPickAdapter;
+import com.example.snowball_plan.database.DayDBHelper;
+import com.example.snowball_plan.entity.DayPlan;
 import com.example.snowball_plan.tools.DateUtil;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class DayFragment extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
@@ -40,6 +49,11 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
     private Button jumpto;
     private Calendar calendar;
     private DatePickerDialog dialog;
+
+    private ViewPager vp;
+
+
+//    private DayDBHelper dbHelper;
 
     public DayFragment() {
 
@@ -84,7 +98,60 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
         //点击弹出对话框选择日期
         jumpto.setOnClickListener(this);
 
+        view.findViewById(R.id.day_page);
+
+//        dbHelper = DayDBHelper.getInstance(this.getContext());
+//        dbHelper.openWriteLink();
+//        dbHelper.openWriteLink();
+
+//        initYearFragmentData();
+        initViewPager();
     }
+
+//    初始化翻页视图
+    public void initViewPager() {
+        PagerTabStrip pts = getView().findViewById(R.id.day_pick);
+        pts.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        pts.setDrawFullUnderline(false);
+        vp = getView().findViewById(R.id.day_page);
+//        ,fragmentListDay
+        DayPickAdapter adapter = new DayPickAdapter(getParentFragmentManager(),calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH));
+        vp.setAdapter(adapter);
+        vp.setCurrentItem(calendar.get(Calendar.DAY_OF_MONTH)-1);
+    }
+
+//    private void initYearFragmentData() {
+//        fragmentListDay = new ArrayList<>();
+//        int year = calendar.get(Calendar.YEAR);
+//        int month = calendar.get(Calendar.MONTH);
+//        int day = calendar.get(Calendar.DAY_OF_MONTH);
+//        String yearDay = year +"-"+ month+"-" +day;
+//
+//        if( month == 2){
+//            if((year%4 == 0 && year%100 != 0 )||(year %400 == 0)){
+//                for(int i = 1;i <= 29;i++){
+//                    EveryDayFragment j = EveryDayFragment.newInstance(yearDay);
+//                    fragmentListDay.add(j);
+//                }
+//            }
+//            else {
+//                for(int i = 1;i <= 28;i++){
+//                    EveryDayFragment j = EveryDayFragment.newInstance(yearDay);
+//                    fragmentListDay.add(j);
+//                }
+//            }
+//        }else if( month == 4 || month == 6 || month == 9 || month == 11 ){
+//            for(int i = 1;i <= 30;i++){
+//                EveryDayFragment j = EveryDayFragment.newInstance(yearDay);
+//                fragmentListDay.add(j);
+//            }
+//        }else if ( month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+//            for(int i = 1;i <= 31;i++){
+//                EveryDayFragment j = EveryDayFragment.newInstance(yearDay);
+//                fragmentListDay.add(j);
+//            }
+//        }
+//    }
 
     @Override
     public void onClick(View v) {
@@ -118,4 +185,8 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         current_day.setText(DateUtil.getDate(calendar));
     }
+
+//    protected void onDestory(){
+//        dbHelper.closeLink();
+//    }
 }

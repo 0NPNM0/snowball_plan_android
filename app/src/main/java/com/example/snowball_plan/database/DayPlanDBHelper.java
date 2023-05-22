@@ -9,23 +9,22 @@ import androidx.annotation.Nullable;
 
 import com.example.snowball_plan.entity.DayPlan;
 
-public class DayDBHelper extends SQLiteOpenHelper {
-
-    private static final String DB_NAME = "day.db";
+public class DayPlanDBHelper extends SQLiteOpenHelper {
+    private static final String DB_NAME = "dayplan.db";
     private static final String TABLE_DAY = "day_plan";
     private static final int DB_VERSION = 1;
-    private static DayDBHelper dbHelper = null;
+    private static DayPlanDBHelper dbHelper = null;
     private SQLiteDatabase mRDB = null;
     private SQLiteDatabase mWDB = null;
 
-    public DayDBHelper(@Nullable Context context) {
+    public DayPlanDBHelper(@Nullable Context context) {
         super(context,DB_NAME,null,DB_VERSION);
     }
 
     //用单例模式获取数据库帮助器的唯一实例
-    public static DayDBHelper getInstance(Context context){
+    public static DayPlanDBHelper getInstance(Context context){
         if(dbHelper == null){
-            dbHelper = new DayDBHelper(context);
+            dbHelper = new DayPlanDBHelper(context);
         }
         return dbHelper;
     }
@@ -60,22 +59,27 @@ public class DayDBHelper extends SQLiteOpenHelper {
     }
 
 
+    public DayPlanDBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-//        //创建日任务表
-//        String sql = "CREATE TABLE IF NOT EXISTS "+ TABLE_DAY +
-//                "(_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
-//                "start_time VARCHAR NOT NULL,"+
-//                "end_time VARCHAR NOT NULL,"+
-//                "type VARCHAR NOT NULL,"+
-//                "list VARCHAR NOT NULL,"+
-////                "repeat VARCHAR ,"+
-//                "conflictp VARCHAR ,"+
-//                "color VARCHAR NOT NULL,"+
-//                "overtime VARCHAR NOT NULL);";
-//        db.execSQL(sql);
+        //创建日任务表
+        String sql = "CREATE TABLE IF NOT EXISTS "+ TABLE_DAY +
+                "(_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                " date VARCHAR NOT NULL,"+
+                "start_time VARCHAR NOT NULL,"+
+                "end_time VARCHAR NOT NULL,"+
+                "type VARCHAR NOT NULL,"+
+                "list VARCHAR NOT NULL,"+
+                "color INTEGER NOT NULL);";
 
+//                "repeat VARCHAR ,"+
+//                "conflictp VARCHAR ,"+
+//                "overtime VARCHAR NOT NULL);";
+        db.execSQL(sql);
     }
 
     @Override
@@ -84,17 +88,19 @@ public class DayDBHelper extends SQLiteOpenHelper {
     }
 
     //保存日计划
-//    public long save(DayPlan dayPlan){
-//        ContentValues cv = new ContentValues();
-//        cv.put("start_time",dayPlan.start_time);
-//        cv.put("end_time",dayPlan.end_time);
-//        cv.put("type",dayPlan.type);
-//        cv.put("list",dayPlan.type);
-////        cv.put("repeat",dayPlan.repeat);
+    public long save(DayPlan dayPlan){
+        ContentValues cv = new ContentValues();
+        cv.put("date",dayPlan.date);
+        cv.put("start_time",dayPlan.start_time);
+        cv.put("end_time",dayPlan.end_time);
+        cv.put("type",dayPlan.type);
+        cv.put("list",dayPlan.type);
+        cv.put("color",dayPlan.color);
+
+//        cv.put("repeat",dayPlan.repeat);
 //        cv.put("conflictp",dayPlan.conflictp);
-//        cv.put("color",dayPlan.color);
 //        cv.put("overtime",dayPlan.overtime);
-//
-//        return mWDB.insert(TABLE_DAY,null,cv);
-//    }
+
+        return mWDB.insert(TABLE_DAY,null,cv);
+    }
 }

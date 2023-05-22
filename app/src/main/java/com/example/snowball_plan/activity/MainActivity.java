@@ -1,33 +1,17 @@
 package com.example.snowball_plan.activity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.content.ContentValues;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -37,18 +21,12 @@ import android.widget.Toast;
 import com.example.snowball_plan.R;
 import com.example.snowball_plan.adapter.MyFragmentPagerAdapter;
 import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
-import com.example.snowball_plan.database.MyDatabaseHelper;
 import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.DayFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
-import com.example.snowball_plan.fragment.YearCellFragment;
-import com.example.snowball_plan.tools.DayDialog;
 import com.example.snowball_plan.tools.YearDialog;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
@@ -61,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
 
-    private MyDatabaseHelper myDatabaseHelper;
 //    private MyDatabaseHelper myDatabaseHelper_t;
 
     private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
@@ -103,13 +80,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(ivCurrent == ivDay){
-            DayDialog dayDialog = new DayDialog(this,R.style.BuildDialog);
-            dayDialog.show();
+//            DayDialog dayDialog = new DayDialog(this,R.style.BuildDialog);
+//            dayDialog.show();
         }
 
-        myDatabaseHelper = new MyDatabaseHelper(this,"sbp.db",null,1);
-//        myDatabaseHelper_t = new MyDatabaseHelper(this,"test.db",null,1);
-        SQLiteDatabase db =myDatabaseHelper.getWritableDatabase();
+//        myDatabaseHelper = new MyDatabaseHelper(this,"sbp.db",null,1);
+////        myDatabaseHelper_t = new MyDatabaseHelper(this,"test.db",null,1);
+//        SQLiteDatabase db =myDatabaseHelper.getWritableDatabase();
 
 
 //

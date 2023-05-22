@@ -48,5 +48,11 @@
         <item name="android:scrollbarTrackVertical">@drawable/tical_scrollbar_bgrecy_ver</item>
     </style>
 
+    <!--日计划中复选框颜色-->
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@drawable/day_checkbox_not_select</item>
+        <item name="colorControlActivated">@drawable/day_checkbox_select</item>
+    </style>
+
 
 </resources>

@@ -44,7 +44,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/o_three"
                     android:gravity="center_horizontal"
-                    android:text="@string/task"
+                    android:text="@string/tasks"
                     android:textColor="@color/black"
                     android:textSize="20sp"></TextView>
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.EveryDayFragment"
+    android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scoll_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:background="@color/light_grey"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:00 - "
+                        android:textSize="30sp"
+                        android:textColor="@color/black"></TextView>
+
+                    <TextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:00"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"></TextView>
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="睡觉"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:gravity="right"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bg_task"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/o_three">
+
+                    <TextView
+                        android:id="@+id/list"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:text="@string/list"></TextView>
+
+                    <ImageButton
+                        android:id="@+id/overtime"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="41dp"
+                        android:background="@drawable/day_checkbox"></ImageButton>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/db_bg"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@color/o_three">
+
+                    <ImageButton
+                        android:id="@+id/edit"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/edit"
+                        ></ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/delete"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="270dp"
+                        android:background="@drawable/delete"
+                        ></ImageButton>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.core.widget.NestedScrollView>

@@ -53,7 +53,7 @@
 
     <string name="plan_with_month">5月计划</string>
     <string name="database">数据库</string>
-    <string name="task">听力
+    <string name="tasks">听力
 阅读
 翻译
 写作</string>
@@ -66,5 +66,9 @@
     <string name="plan_repeat">计划重复日期</string>
     <string name="plan_conflict">冲突计划</string>
     <string name="plan_overtime">超时自动勾选</string>
+
+    <string name="list">IT项目综合设计与实践
+王振讲师
+西区综合实验楼 - A305</string>
 
 </resources>

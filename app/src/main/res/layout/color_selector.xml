@@ -13,7 +13,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab1"
         android:textColor="@color/o_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/one_two"
@@ -23,7 +24,8 @@
         android:background="@drawable/tab2"
         android:textColor="@color/red"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/one_three"
@@ -33,7 +35,8 @@
         android:background="@drawable/tab3"
         android:textColor="@color/o_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/one_four"
@@ -43,7 +46,8 @@
         android:background="@drawable/tab4"
         android:textColor="@color/o_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/one_five"
@@ -53,7 +57,8 @@
         android:background="@drawable/tab5"
         android:textColor="@color/o_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/two_one"
@@ -62,7 +67,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab6"
         android:textColor="@color/t_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/two_two"
@@ -72,7 +78,8 @@
         android:background="@drawable/tab7"
         android:textColor="@color/t_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/two_three"
@@ -82,7 +89,8 @@
         android:background="@drawable/tab8"
         android:textColor="@color/t_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/two_four"
@@ -92,7 +100,8 @@
         android:background="@drawable/tab9"
         android:textColor="@color/t_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/two_five"
@@ -102,7 +111,8 @@
         android:background="@drawable/tab10"
         android:textColor="@color/t_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/three_one"
@@ -111,7 +121,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab11"
         android:textColor="@color/th_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/three_two"
@@ -121,7 +132,8 @@
         android:background="@drawable/tab12"
         android:textColor="@color/th_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/three_three"
@@ -131,7 +143,8 @@
         android:background="@drawable/tab13"
         android:textColor="@color/th_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/three_four"
@@ -141,7 +154,8 @@
         android:background="@drawable/tab14"
         android:textColor="@color/th_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/three_five"
@@ -151,7 +165,8 @@
         android:background="@drawable/tab15"
         android:textColor="@color/th_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/four_one"
@@ -160,7 +175,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab16"
         android:textColor="@color/f_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/four_two"
@@ -170,7 +186,8 @@
         android:background="@drawable/tab17"
         android:textColor="@color/f_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/four_three"
@@ -180,7 +197,8 @@
         android:background="@drawable/tab18"
         android:textColor="@color/f_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/four_four"
@@ -190,7 +208,8 @@
         android:background="@drawable/tab19"
         android:textColor="@color/f_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/four_five"
@@ -200,7 +219,8 @@
         android:background="@drawable/tab20"
         android:textColor="@color/f_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/five_one"
@@ -209,7 +229,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab21"
         android:textColor="@color/fi_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/five_two"
@@ -219,7 +240,8 @@
         android:background="@drawable/tab22"
         android:textColor="@color/fi_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/five_three"
@@ -229,7 +251,8 @@
         android:background="@drawable/tab23"
         android:textColor="@color/fi_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/five_four"
@@ -239,7 +262,8 @@
         android:background="@drawable/tab24"
         android:textColor="@color/fi_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/five_five"
@@ -249,7 +273,8 @@
         android:background="@drawable/tab25"
         android:textColor="@color/fi_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/six_one"
@@ -258,7 +283,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab26"
         android:textColor="@color/s_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/six_two"
@@ -268,7 +294,8 @@
         android:background="@drawable/tab27"
         android:textColor="@color/s_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/six_three"
@@ -278,7 +305,8 @@
         android:background="@drawable/tab28"
         android:textColor="@color/s_three"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/six_four"
@@ -288,7 +316,8 @@
         android:background="@drawable/tab29"
         android:textColor="@color/s_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/six_five"
@@ -298,7 +327,8 @@
         android:background="@drawable/tab30"
         android:textColor="@color/s_five"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/seven_one"
@@ -307,7 +337,8 @@
         android:layout_gravity="center"
         android:background="@drawable/tab31"
         android:textColor="@color/se_one"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/seven_two"
@@ -317,7 +348,8 @@
         android:background="@drawable/tab32"
         android:textColor="@color/se_two"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/seven_three"
@@ -327,7 +359,8 @@
         android:background="@drawable/tab33"
         android:textColor="@color/grey"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/seven_four"
@@ -337,7 +370,8 @@
         android:background="@drawable/tab34"
         android:textColor="@color/se_four"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/seven_five"
@@ -347,7 +381,8 @@
         android:background="@drawable/tab35"
         android:textColor="@color/white"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"></android.widget.Button>
+        android:layout_marginTop="10dp"
+        style="?android:attr/borderlessButtonStyle"></android.widget.Button>
 
 
 

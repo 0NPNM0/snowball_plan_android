@@ -9,7 +9,7 @@
         android:layout_height="30dp"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -41,6 +41,25 @@
             android:textColor="@color/black"
             android:textSize="20sp"></android.widget.Button>
     </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/day_page"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.PagerTabStrip
+            android:id="@+id/day_pick"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></androidx.viewpager.widget.PagerTabStrip>
+
+    </androidx.viewpager.widget.ViewPager>
 
 
 </LinearLayout>
