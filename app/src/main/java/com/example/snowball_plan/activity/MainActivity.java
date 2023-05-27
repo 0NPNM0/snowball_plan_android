@@ -1,9 +1,11 @@
 package com.example.snowball_plan.activity;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -74,112 +76,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //新建任务
     private void onClickBuild(View view) {
 
-        if(ivCurrent == ivYear){
-            YearDialog yearDialog = new YearDialog(this,R.style.BuildDialog);
+        if (ivCurrent == ivYear) {
+            YearDialog yearDialog = new YearDialog(this, R.style.BuildDialog);
             yearDialog.show();
         }
 
-        if(ivCurrent == ivDay){
-//            DayDialog dayDialog = new DayDialog(this,R.style.BuildDialog);
-//            dayDialog.show();
+        if (ivCurrent == ivDay) {
+            Intent intent = new Intent(this, DayActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         }
-
-//        myDatabaseHelper = new MyDatabaseHelper(this,"sbp.db",null,1);
-////        myDatabaseHelper_t = new MyDatabaseHelper(this,"test.db",null,1);
-//        SQLiteDatabase db =myDatabaseHelper.getWritableDatabase();
-
-
-//
-//        ContentValues values_year = new ContentValues();
-//        ContentValues values_month = new ContentValues();
-//        ContentValues values_task_type = new ContentValues();
-//        ContentValues values_task_list = new ContentValues();
-//        ContentValues values_task_color = new ContentValues();
-//        ContentValues values_task = new ContentValues();
-//
-//        ione = findViewById(R.id.ione);
-//        itwo = findViewById(R.id.itwo);
-//        ithree = findViewById(R.id.ithree);
-//        ifour = findViewById(R.id.ifour);
-//        ifive = findViewById(R.id.ifive);
-//        isix = findViewById(R.id.isix);
-//        iseven = findViewById(R.id.iseven);
-//        ieight = findViewById(R.id.ieight);
-//        inine = findViewById(R.id.inine);
-//        iten = findViewById(R.id.iten);
-//        ieleven = findViewById(R.id.ieleven);
-//        itwelve = findViewById(R.id.itwelve);
-//
-//        String plan_month = "";
-//
-//        if(ione.isSelected() == true){
-//            plan_month += "1月,";
-//        }
-//        if(itwo.isSelected() == true){
-//            plan_month += "2月,";
-//        }
-//        if(ithree.isSelected() == true){
-//            plan_month += "3月,";
-//        }
-//        if(ifour.isSelected() == true){
-//            plan_month += "4月,";
-//        }
-//        if(ifive.isSelected() == true){
-//            plan_month += "5月,";
-//        }
-//        if(isix.isSelected() == true){
-//            plan_month += "6月,";
-//        }
-//        if(iseven.isSelected() == true){
-//            plan_month += "7月,";
-//        }
-//        if(ieight.isSelected() == true){
-//            plan_month += "8月,";
-//        }
-//        if(inine.isSelected() == true){
-//            plan_month += "9月,";
-//        }
-//        if(iten.isSelected() == true){
-//            plan_month += "10月,";
-//        }
-//        if(ieleven.isSelected() == true){
-//            plan_month += "11月,";
-//        }
-//        if(itwelve.isSelected() == true){
-//            plan_month += "12月,";
-//        }
-
-        //计划的年份
-//        values_year.put("year_type", String.valueOf(myFragmentStateVPAdapter.getItem(R.id.tab_layout_year)));
-//        db.insert("year_type",null,values_year);
-//
-//        //计划月份
-//        values_month.put("task_type",plan_month);
-//        db.insert("task_type",null,values_month);
-
-
-//        //计划类别
-//        year_task_type = findViewById(R.id.year_task_type);
-//        String ytt = String.valueOf(year_task_type.getText());
-//        values_task_type.put("task_type",ytt);
-//
-//        //计划清单
-//        year_task_list = findViewById(R.id.year_task_list);
-//        String yyl = String.valueOf(year_task_list.getText());
-//        values_task_list.put("task_list",yyl);
-
-        //计划颜色
-//        YearDialog yearDialog = new YearDialog();
-//        year_task_color = findViewById()
     }
 
 
     private void initPager() {
         mviewPagerYear = findViewById(R.id.vp_year);
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(VPYearFragment.newInstance("年",""));
-        fragments.add(BlankFragment.newInstance("月",""));
         fragments.add(DayFragment.newInstance("日",""));
+        fragments.add(BlankFragment.newInstance("月",""));
+        fragments.add(VPYearFragment.newInstance("年",""));
+
 
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),getLifecycle(),fragments);
         mviewPagerYear.setAdapter(myFragmentPagerAdapter);
@@ -214,8 +130,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ivMonth = findViewById(R.id.tab_iv_month);
         ivDay = findViewById(R.id.tab_iv_day);
 
-        ivYear.setSelected(true);
-        ivCurrent = ivYear;
+        ivDay.setSelected(true);
+        ivCurrent = ivDay;
     }
 
     private void changeTab(int position) {
@@ -223,8 +139,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (position){
             case 0:
                 ivCurrent.setSelected(false);
-                ivYear.setSelected(true);
-                ivCurrent = ivYear;
+                ivDay.setSelected(true);
+                ivCurrent = ivDay;
                 break;
             case 1:
                 ivCurrent.setSelected(false);
@@ -233,8 +149,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case 2:
                 ivCurrent.setSelected(false);
-                ivDay.setSelected(true);
-                ivCurrent = ivDay;
+                ivYear.setSelected(true);
+                ivCurrent = ivYear;
                 break;
         }
 
@@ -256,37 +172,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeTab(v.getId());
         judge(v.getId());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

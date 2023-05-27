@@ -1,27 +1,21 @@
 package com.example.snowball_plan.fragment;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.example.snowball_plan.R;
 //import com.example.snowball_plan.adapter.DayTaskAdapter;
-import com.example.snowball_plan.database.DayDBHelper;
+import com.example.snowball_plan.adapter.PlanListAdapter;
+import com.example.snowball_plan.database.DayPlanDBHelper;
 import com.example.snowball_plan.entity.DayPlan;
-import com.example.snowball_plan.tools.DateUtil;
 
-import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -31,13 +25,11 @@ import java.util.List;
  */
 public class EveryDayFragment extends Fragment {
 
-    public TextView show;
-    public Calendar calendar;
 
-    public static EveryDayFragment newInstance(String yearDay) {
+    public static EveryDayFragment newInstance(String yearMonth) {
         EveryDayFragment fragment = new EveryDayFragment();
         Bundle args = new Bundle();
-        args.putString("yearDay",yearDay);
+        args.putString("yearMonth",yearMonth);
         fragment.setArguments(args);
         return fragment;
     }
@@ -46,23 +38,24 @@ public class EveryDayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        View view = inflater.inflate(R.layout.fragment_every_day, container, false);
+        View view = inflater.inflate(R.layout.fragment_every_day, container, false);
 
-//        ListView lv_day = view.findViewById(R.id.lv_day);
-//
-//        DayDBHelper mDBHelper = DayDBHelper.getInstance(getContext());
-//        Bundle arguments = getArguments();
-//        String yearDay = arguments.getString("yearDay");
-//        List<DayPlan> dayPlanList = mDBHelper.queryByDay(yearDay);
-//        DayTaskAdapter adapter = new DayTaskAdapter(getContext(),dayPlanList);
-//        lv_day.setAdapter(adapter);
+        ListView lv_plan = view.findViewById(R.id.lv_plan);
 
-        return inflater.inflate(R.layout.fragment_every_day, container, false);
+        DayPlanDBHelper mDBHelper = DayPlanDBHelper.getInstance(getContext());
+        Bundle arguments = getArguments();
+        String yearMonth = arguments.getString("yearMonth");
+        List<DayPlan> dayPlanList = mDBHelper.queryByMonth(yearMonth);
+        Collections.reverse(dayPlanList);
+        PlanListAdapter adapter = new PlanListAdapter(getContext(),dayPlanList);
+        lv_plan.setAdapter(adapter);
+
+        return view;
     }
 
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
+
 
 }

@@ -16,4 +16,10 @@ public class DateUtil {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         return simpleDateFormat.format(date);
     }
+
+    public static String getMonth(Calendar calendar){
+        Date date = calendar.getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
+        return simpleDateFormat.format(date);
+    }
 }

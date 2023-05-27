@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -92,7 +93,10 @@ public class DayActivity extends AppCompatActivity implements View.OnClickListen
 
                 if(dbHelper.save(dayPlan) > 0){
                     Toast.makeText(getApplicationContext(),"添加计划成功！",Toast.LENGTH_SHORT).show();
-//                    dismiss();
+                    Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -100,7 +104,7 @@ public class DayActivity extends AppCompatActivity implements View.OnClickListen
         no_day.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                dismi(); //让对话框消失
+                finish(); //让对话框消失
             }
         });
 

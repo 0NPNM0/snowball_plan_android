@@ -2,6 +2,7 @@ package com.example.snowball_plan.entity;
 
 public class DayPlan {
 
+    public int id;
     public String date;
     public String start_time;
     public String end_time;
@@ -17,13 +18,22 @@ public class DayPlan {
     public DayPlan() {
     }
 
-    public DayPlan(String date, String start_time, String end_time, String type, String list, int color) {
+    public DayPlan(int id, String date, String start_time, String end_time, String type, String list, int color) {
+        this.id = id;
         this.date = date;
         this.start_time = start_time;
         this.end_time = end_time;
         this.type = type;
         this.list = list;
         this.color = color;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDate() {
@@ -77,7 +87,8 @@ public class DayPlan {
     @Override
     public String toString() {
         return "DayPlan{" +
-                "date='" + date + '\'' +
+                "id=" + id +
+                ", date='" + date + '\'' +
                 ", start_time='" + start_time + '\'' +
                 ", end_time='" + end_time + '\'' +
                 ", type='" + type + '\'' +

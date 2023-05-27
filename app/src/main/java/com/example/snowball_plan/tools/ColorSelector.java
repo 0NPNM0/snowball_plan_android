@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.widget.Toast;
 
 import com.example.snowball_plan.R;
+import com.example.snowball_plan.entity.DayPlan;
 
 public class ColorSelector {
 
@@ -26,47 +27,47 @@ public class ColorSelector {
 //        if(id == R.id.one_four) color = Color.argb(1,248,181,190);
 //        if(id == R.id.one_five) color = Color.argb(1,255,217,221);
 
-        if(id == R.id.one_one) color = R.color.o_one;
-        if(id == R.id.one_two) color = R.color.red;
-        if(id == R.id.one_three) color = R.color.o_three;
-        if(id == R.id.one_four) color = R.color.o_four;
-        if(id == R.id.one_five) color = R.color.o_five;
+        if(id == R.id.one_one) color = 0xFFD84242;
+        if(id == R.id.one_two) color = 0xFFC85353;
+        if(id == R.id.one_three) color = 0xFFE08994;
+        if(id == R.id.one_four) color = 0xFFF8B5BE;
+        if(id == R.id.one_five) color = 0xFFFFD9DD;
 
-        if(id == R.id.two_one) color = R.color.t_one;
-        if(id == R.id.two_two) color = R.color.t_two;
-        if(id == R.id.two_three) color = R.color.t_three;
-        if(id == R.id.two_four) color = R.color.t_four;
-        if(id == R.id.two_five) color = R.color.t_five;
+        if(id == R.id.two_one) color = 0xFFDF8E00;
+        if(id == R.id.two_two) color = 0xFFDA9F38;
+        if(id == R.id.two_three) color = 0xFFE8B968;
+        if(id == R.id.two_four) color = 0xFFF8D79F;
+        if(id == R.id.two_five) color = 0xFFFFEAC6;
 
-        if(id == R.id.three_one) color = R.color.th_one;
-        if(id == R.id.three_two) color = R.color.th_two;
-        if(id == R.id.three_three) color = R.color.th_three;
-        if(id == R.id.three_four) color = R.color.th_four;
-        if(id == R.id.three_five) color = R.color.th_five;
+        if(id == R.id.three_one) color = 0xFFE2C602;
+        if(id == R.id.three_two) color = 0xFFE8D64F;
+        if(id == R.id.three_three) color = 0xFFE9DA6D;
+        if(id == R.id.three_four) color = 0xFFF1E8A4;
+        if(id == R.id.three_five) color = 0xFFFAF6D9;
 
-        if(id == R.id.four_one) color = R.color.f_one;
-        if(id == R.id.four_two) color = R.color.f_two;
-        if(id == R.id.four_three) color =R.color.f_three;
-        if(id == R.id.four_four) color = R.color.f_four;
-        if(id == R.id.four_five) color = R.color.f_five;
+        if(id == R.id.four_one) color = 0xFF008409;
+        if(id == R.id.four_two) color = 0xFF289B30;
+        if(id == R.id.four_three) color =0xFF62BA5B;
+        if(id == R.id.four_four) color = 0xFF8BD46B;
+        if(id == R.id.four_five) color = 0xFFBAE3A8;
 
-        if(id == R.id.five_one) color = R.color.fi_one;
-        if(id == R.id.five_two) color = R.color.fi_two;
-        if(id == R.id.five_three) color = R.color.fi_three;
-        if(id == R.id.five_four) color = R.color.fi_four;
-        if(id == R.id.five_five) color = R.color.fi_five;
+        if(id == R.id.five_one) color = 0xFF2C63C8;
+        if(id == R.id.five_two) color = 0xFF4E7CD0;
+        if(id == R.id.five_three) color = 0xFF7D9FDD;
+        if(id == R.id.five_four) color = 0xFFA5BDEA;
+        if(id == R.id.five_five) color = 0xFFC2D4F5;
 
-        if(id == R.id.six_one) color = R.color.s_one;
-        if(id == R.id.six_two) color = R.color.s_two;
-        if(id == R.id.six_three) color = R.color.s_three;
-        if(id == R.id.six_four) color = R.color.s_four;
-        if(id == R.id.six_five) color = R.color.s_five;
+        if(id == R.id.six_one) color = 0xFF7E40B4;
+        if(id == R.id.six_two) color = 0xFF9749D8;
+        if(id == R.id.six_three) color = 0xFFBD84ED;
+        if(id == R.id.six_four) color = 0xFFD4A4FB;
+        if(id == R.id.six_five) color = 0xFFE7C9FF;
 
-        if(id == R.id.seven_one) color = R.color.se_one;
-        if(id == R.id.seven_two) color = R.color.se_two;
-        if(id == R.id.seven_three) color = R.color.grey;
-        if(id == R.id.seven_four) color = R.color.se_four;
-        if(id == R.id.seven_five) color = R.color.white;
+        if(id == R.id.seven_one) color = 0xFF787878;
+        if(id == R.id.seven_two) color = 0xFF9E9999;
+        if(id == R.id.seven_three) color = 0xFFC4C4C4;
+        if(id == R.id.seven_four) color = 0xFFE0E0E0;
+        if(id == R.id.seven_five) color = 0xFFFFFFFF;
 
 
         return color;
