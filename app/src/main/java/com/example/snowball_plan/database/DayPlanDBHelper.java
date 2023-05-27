@@ -96,6 +96,7 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
     //保存日计划
     public long save(DayPlan dayPlan){
         ContentValues cv = new ContentValues();
+//        cv.put("id",dayPlan.id);
         cv.put("date",dayPlan.date);
         cv.put("start_time",dayPlan.start_time);
         cv.put("end_time",dayPlan.end_time);
@@ -110,8 +111,27 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
         return mWDB.insert(TABLE_DAY,null,cv);
     }
 
-    public void deletePlan(int id){
-        mWDB.delete(TABLE_DAY,"_id=?",new String[]{String.valueOf(id)});
+    public long deletePlan(int id){
+         return mWDB.delete(TABLE_DAY,"_id=?",new String[]{String.valueOf(id)});
+    }
+
+//    public int queryPlanById(int id) {
+//
+//        return id;
+//    }
+
+    public long updatePlan(int id){
+        ContentValues values = new ContentValues();
+//
+//        mRDB.query(TABLE_DAY,new String[]{String.valueOf(id)},)
+//
+//        values.put("date",dayPlan.date);
+//        values.put("start_time",dayPlan.start_time);
+//        values.put("end_time",dayPlan.end_time);
+//        values.put("type",dayPlan.type);
+//        values.put("list",dayPlan.list);
+//        values.put("color",dayPlan.color);
+        return mWDB.update(TABLE_DAY,values,"id=?",new String[]{String.valueOf(id)});
     }
 
 
@@ -138,4 +158,5 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
 
         return list;
     }
+
 }
