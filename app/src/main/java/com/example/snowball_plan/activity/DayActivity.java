@@ -49,7 +49,7 @@ public class DayActivity extends AppCompatActivity implements View.OnClickListen
 
     private TextView tv_date;
     private Calendar calendar;
-    private ImageView add;
+    private ImageView add,tick;
 
     private DayPlanDBHelper dbHelper;
 
@@ -69,6 +69,7 @@ public class DayActivity extends AppCompatActivity implements View.OnClickListen
         add = findViewById(R.id.add);
         add.setOnClickListener(this);
         colorSelector = new ColorSelector();
+        tick =findViewById(R.id.tick);
 
         dbHelper = DayPlanDBHelper.getInstance(this);
         dbHelper.openReadLink();
@@ -90,6 +91,7 @@ public class DayActivity extends AppCompatActivity implements View.OnClickListen
                 dayPlan.type = day_task_type.getText().toString();
                 dayPlan.list = day_task_list.getText().toString();
                 dayPlan.color = colorSelector.Selector(isCurrent.getId());
+                dayPlan.tick = false;
 
                 if(dbHelper.save(dayPlan) > 0){
                     Toast.makeText(getApplicationContext(),"添加计划成功！",Toast.LENGTH_SHORT).show();

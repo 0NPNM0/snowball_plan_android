@@ -18,7 +18,7 @@ import java.util.List;
 public class DayPlanDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "dayplan.db";
     private static final String TABLE_DAY = "day_plan";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
     private static DayPlanDBHelper dbHelper = null;
     private SQLiteDatabase mRDB = null;
     private SQLiteDatabase mWDB = null;
@@ -90,7 +90,8 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        String sql = "ALTER TABLE " + TABLE_DAY + " ADD COLUMN tick INTEGER NOT NULL";
+        db.execSQL(sql);
     }
 
     //保存日计划
@@ -103,6 +104,7 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
         cv.put("type",dayPlan.type);
         cv.put("list",dayPlan.list);
         cv.put("color",dayPlan.color);
+        cv.put("tick", dayPlan.tick);
 
 //        cv.put("repeat",dayPlan.repeat);
 //        cv.put("conflictp",dayPlan.conflictp);
@@ -115,23 +117,45 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
          return mWDB.delete(TABLE_DAY,"_id=?",new String[]{String.valueOf(id)});
     }
 
-//    public int queryPlanById(int id) {
-//
-//        return id;
-//    }
+    public boolean queryTickById(int id) {
 
-    public long updatePlan(int id){
+        Cursor cursor = mRDB.query(TABLE_DAY,null,"_id=?",new String[]{String.valueOf(id)},null,null,null);
+        DayPlan plan = new DayPlan();
+        while(cursor.moveToNext()){
+            plan.id = cursor.getInt(0);
+            plan.date = cursor.getString(1);
+            plan.start_time = cursor.getString(2);
+            plan.end_time = cursor.getString(3);
+            plan.type = cursor.getString(4);
+            plan.list = cursor.getString(5);
+            plan.color = cursor.getInt(6);
+            plan.tick = (cursor.getInt(7) == 0) ? false : true ;
+        }
+        return plan.tick;
+    }
+
+    public void updateTick(DayPlan dayPlan){
         ContentValues values = new ContentValues();
-//
-//        mRDB.query(TABLE_DAY,new String[]{String.valueOf(id)},)
-//
-//        values.put("date",dayPlan.date);
-//        values.put("start_time",dayPlan.start_time);
-//        values.put("end_time",dayPlan.end_time);
-//        values.put("type",dayPlan.type);
-//        values.put("list",dayPlan.list);
-//        values.put("color",dayPlan.color);
-        return mWDB.update(TABLE_DAY,values,"id=?",new String[]{String.valueOf(id)});
+        if(dayPlan.tick == true){
+            values.put("tick",1);
+        }else{
+            values.put("tick",0);
+        }
+
+        mWDB.update(TABLE_DAY,values,"_id=?",new String[]{String.valueOf(dayPlan.id)});
+    }
+
+    public long updatePlan(DayPlan dayPlan,int id){
+        ContentValues values = new ContentValues();
+
+        values.put("date",dayPlan.date);
+        values.put("start_time",dayPlan.start_time);
+        values.put("end_time",dayPlan.end_time);
+        values.put("type",dayPlan.type);
+        values.put("list",dayPlan.list);
+        values.put("color",dayPlan.color);
+        values.put("tick",dayPlan.tick);
+        return mWDB.update(TABLE_DAY,values,"_id=?",new String[]{String.valueOf(dayPlan.id)});
     }
 
 

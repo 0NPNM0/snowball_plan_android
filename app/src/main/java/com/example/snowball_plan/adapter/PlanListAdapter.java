@@ -53,30 +53,29 @@ public class PlanListAdapter extends BaseAdapter{
     private void deletePlan(DayPlan dayPlan){
         dayPlanDBHelper = DayPlanDBHelper.getInstance(mContext);
         long res = dayPlanDBHelper.deletePlan(dayPlan.id);
-        DayPlan removed = null;
-        for(DayPlan d:mDayPlanList){
-            removed = d;
-            break;
-        }
-        mDayPlanList.remove(removed);
         if(res>0){
             Toast.makeText(mContext,"删除计划成功！",Toast.LENGTH_SHORT).show();
         }
     }
 
+    private void updateTick(DayPlan dayPlan){
+        dayPlanDBHelper = DayPlanDBHelper.getInstance(mContext);
+        dayPlanDBHelper.updateTick(dayPlan);
+    }
+
     private void updatePlan(DayPlan dayPlan){
         dayPlanDBHelper = DayPlanDBHelper.getInstance(mContext);
-        long res = dayPlanDBHelper.updatePlan(dayPlan.id);
+        long res = dayPlanDBHelper.updatePlan(dayPlan,dayPlan.id);
 
         if(res>0){
             Toast.makeText(mContext,"修改计划成功！",Toast.LENGTH_SHORT).show();
         }
     }
 
-//    private void queryById(int id){
-//        dayPlanDBHelper = DayPlanDBHelper.getInstance(mContext);
-//        dayPlanDBHelper.queryPlanById(id);
-//    }
+    private boolean queryTickId(DayPlan dayPlan){
+        dayPlanDBHelper = DayPlanDBHelper.getInstance(mContext);
+        return dayPlanDBHelper.queryTickById(dayPlan.id);
+    }
 
     public final class ViewHolder{
 
@@ -103,7 +102,7 @@ public class PlanListAdapter extends BaseAdapter{
         if(convertView == null){
             holder = new ViewHolder();
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_plan_test,null);
-      holder.date = convertView.findViewById(R.id.date);
+            holder.date = convertView.findViewById(R.id.date);
             holder.start_time = convertView.findViewById(R.id.start_time);
             holder.end_time = convertView.findViewById(R.id.end_time);
             holder.type = convertView.findViewById(R.id.type);
@@ -114,7 +113,6 @@ public class PlanListAdapter extends BaseAdapter{
             holder.edit = convertView.findViewById(R.id.edit);
             holder.delete = convertView.findViewById(R.id.delete);
             holder.plan = convertView.findViewById(R.id.plan);
-            holder.tick = convertView.findViewById(R.id.tick);
 
             convertView.setTag(holder);
         }else{
@@ -129,16 +127,23 @@ public class PlanListAdapter extends BaseAdapter{
         holder.up_bg.setBackgroundColor(day.color);
         holder.list.setText(day.list);
         holder.down_bg.setBackgroundColor(day.color);
+
         holder.tick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(holder.tick.isSelected()){
                     holder.tick.setSelected(false);
+                    day.tick = false;
+                    updateTick(day);
                 }else{
                     holder.tick.setSelected(true);
+                    day.tick = true;
+                    updateTick(day);
                 }
             }
         });
+
+        holder.tick.setSelected(queryTickId(day));
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             ConfirmDialog confirmDialog = new ConfirmDialog(mContext);
@@ -240,8 +245,6 @@ public class PlanListAdapter extends BaseAdapter{
                     @Override
                     public void onClick(View v) {
 
-//                        queryById(day.id);
-
 //                        DayPlan dayPlan1 = new DayPlan();
 //                        holder.date.setText(tv_date.getText());
 //                        holder.start_time.setText(timepicker_start.getHour()+":"+timepicker_start.getMinute());
@@ -252,7 +255,8 @@ public class PlanListAdapter extends BaseAdapter{
 //                        holder.list.setText(day_task_list.getText());
 //                        holder.down_bg.setBackgroundColor(colorSelector1.Selector(isCurrent.getId()));
 
-                        DayPlan day_new = new DayPlan();
+
+                        DayPlan day_new = mDayPlanList.get(position);
                         day_new.date = tv_date.getText().toString();
                         day_new.start_time =timepicker_start.getHour()+":"+timepicker_start.getMinute();
                         day_new.end_time =timepicker_end.getHour()+":"+timepicker_end.getMinute();
@@ -262,14 +266,14 @@ public class PlanListAdapter extends BaseAdapter{
                         day_new.color = colorSelector1.Selector(isCurrent.getId());
                         updatePlan(day_new);
 
-//                        DayPlan day = mDayPlanList.get(position);
-//                        holder.date.setText(day.date);
-//                        holder.start_time.setText(day.start_time);
-//                        holder.end_time.setText(day.end_time);
-//                        holder.type.setText(day.type);
-//                        holder.up_bg.setBackgroundColor(day.color);
-//                        holder.list.setText(day.list);
-//                        holder.down_bg.setBackgroundColor(day.color);
+                        DayPlan day = mDayPlanList.get(position);
+                        holder.date.setText(day.date);
+                        holder.start_time.setText(day.start_time);
+                        holder.end_time.setText(day.end_time);
+                        holder.type.setText(day.type);
+                        holder.up_bg.setBackgroundColor(day.color);
+                        holder.list.setText(day.list);
+                        holder.down_bg.setBackgroundColor(day.color);
 
                         editDialog.dismiss();
                     }

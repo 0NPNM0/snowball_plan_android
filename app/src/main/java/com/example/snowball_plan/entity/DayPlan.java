@@ -1,7 +1,12 @@
 package com.example.snowball_plan.entity;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class DayPlan {
 
+    @PrimaryKey(autoGenerate = true)
     public int id;
     public String date;
     public String start_time;
@@ -9,6 +14,7 @@ public class DayPlan {
     public String type;
     public String list;
     public int color;
+    public boolean tick;
 
 //    public String repeat;
 //    public String conflictp;
@@ -18,7 +24,7 @@ public class DayPlan {
     public DayPlan() {
     }
 
-    public DayPlan(int id, String date, String start_time, String end_time, String type, String list, int color) {
+    public DayPlan(int id, String date, String start_time, String end_time, String type, String list, int color, boolean tick) {
         this.id = id;
         this.date = date;
         this.start_time = start_time;
@@ -26,6 +32,7 @@ public class DayPlan {
         this.type = type;
         this.list = list;
         this.color = color;
+        this.tick = tick;
     }
 
     public int getId() {
@@ -84,6 +91,14 @@ public class DayPlan {
         this.color = color;
     }
 
+    public boolean isTick() {
+        return tick;
+    }
+
+    public void setTick(boolean tick) {
+        this.tick = tick;
+    }
+
     @Override
     public String toString() {
         return "DayPlan{" +
@@ -94,6 +109,7 @@ public class DayPlan {
                 ", type='" + type + '\'' +
                 ", list='" + list + '\'' +
                 ", color=" + color +
+                ", tick=" + tick +
                 '}';
     }
 }
