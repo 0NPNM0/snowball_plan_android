@@ -179,6 +179,30 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
 
             list.add(plan);
         }
+        return list;
+    }
+
+
+    @SuppressLint("Range")
+    public List<DayPlan> queryByDay(String yearMonth){
+        List<DayPlan> list = new ArrayList<>();
+
+        //select * from day_plan where date like '2035_09%'
+        String sql = "select * from " + TABLE_DAY + " where date like '"+yearMonth+"'";
+        Log.d("ning",sql);
+        Cursor cursor = mRDB.rawQuery(sql,null);
+        while(cursor.moveToNext()){
+            DayPlan plan = new DayPlan();
+            plan.id = cursor.getInt(cursor.getColumnIndex("_id"));
+            plan.date = cursor.getString(cursor.getColumnIndex("date"));
+            plan.start_time = cursor.getString(cursor.getColumnIndex("start_time"));
+            plan.end_time = cursor.getString(cursor.getColumnIndex("end_time"));
+            plan.type = cursor.getString(cursor.getColumnIndex("type"));
+            plan.list = cursor.getString(cursor.getColumnIndex("list"));
+            plan.color = cursor.getInt(cursor.getColumnIndex("color"));
+
+            list.add(plan);
+        }
 
         return list;
     }

@@ -28,4 +28,14 @@ public class DateUtil {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return simpleDateFormat;
     }
+
+    public static String test(Calendar calendar){
+        calendar.set(Calendar.YEAR,2023);
+        calendar.set(Calendar.MONTH,5);
+        calendar.set(Calendar.DAY_OF_MONTH,28);
+        Date date = calendar.getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(date);
+    }
+
 }

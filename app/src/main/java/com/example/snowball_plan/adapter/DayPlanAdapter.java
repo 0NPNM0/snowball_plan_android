@@ -18,29 +18,29 @@ import java.util.List;
 public class DayPlanAdapter extends FragmentStatePagerAdapter {
 
     private final int mYear;
-//    private final int mMonth;
+    private final int mMonth;
 
     private Context context;
 
     List<Fragment> fragmentList = new ArrayList<>();
 
-    public DayPlanAdapter(@NonNull FragmentManager fm, int year) {
+    public DayPlanAdapter(@NonNull FragmentManager fm, int year,int month) {
         super(fm,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.mYear = year;
-//        this.mMonth = month;
+        this.mMonth = month;
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
 
-        int month = position + 1;
-        String zeroMonth = month < 10 ? "0" + month : String.valueOf(month);
-        String yearMonth = mYear + "-"+ zeroMonth;
+//        int month = position + 1;
+//        String zeroMonth = month < 10 ? "0" + month : String.valueOf(month);
+//        String yearMonth = mYear + "-"+ zeroMonth;
 
-//        int day = position ;
-//        String zeroMonth = day < 10 ? "0" + day : String.valueOf(day);
-//        String yearMonth = mYear+"-"+mMonth+"-"+day;
+        int day = position ;
+        String zeroMonth = day < 10 ? "0" + day : String.valueOf(day);
+        String yearMonth = mYear+"-"+mMonth+"-"+day;
 
         Log.d("ning",yearMonth);
         return EveryDayFragment.newInstance(yearMonth);
@@ -48,12 +48,12 @@ public class DayPlanAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 12;
+        return 31;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return (position+1)  + "月份";
+        return position  + "号";
     }
 }

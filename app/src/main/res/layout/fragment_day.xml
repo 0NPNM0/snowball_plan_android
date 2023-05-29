@@ -2,45 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+
+        android:id="@+id/tab_layout_day"
         android:layout_width="280dp"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:background="@color/light_grey"
-            android:text="@string/now"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_gravity="center"></TextView>
-
-        <TextView
-            android:id="@+id/tv_month"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:background="@color/light_grey"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp"></TextView>
-
-        <android.widget.Button
-            android:id="@+id/jumpto"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:background="@color/grey"
-            android:text="@string/jumpto"
-            android:textColor="@color/black"
-            android:textSize="20sp"></android.widget.Button>
-    </LinearLayout>
+        app:tabTextAppearance="@style/TabLayoutTextSize"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/red"
+        app:tabIndicatorColor="@color/red"
+        app:tabBackground="@color/white"
+        app:tabTextColor="@color/black" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/day_page"
@@ -52,27 +30,13 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <androidx.viewpager.widget.PagerTabStrip
-            android:id="@+id/day_pick"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:background="@color/white"></androidx.viewpager.widget.PagerTabStrip>
-
-<!--        <com.google.android.material.tabs.TabLayout-->
-
-<!--            android:id="@+id/tab_layout_day"-->
+<!--        <androidx.viewpager.widget.PagerTabStrip-->
+<!--            android:id="@+id/day_pick"-->
 <!--            android:layout_width="280dp"-->
-
 <!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginLeft="57dp"-->
-<!--            app:tabTextAppearance="@style/TabLayoutTextSize"-->
+<!--            android:background="@color/white"></androidx.viewpager.widget.PagerTabStrip>-->
 
-<!--            app:tabMode="scrollable"-->
-<!--            app:tabSelectedTextColor="@color/black"-->
-<!--            app:tabIndicatorColor="@color/black"-->
-<!--            app:tabBackground="@color/white"-->
-<!--            app:tabTextColor="@color/black" />-->
+
 
     </androidx.viewpager.widget.ViewPager>
 
