@@ -58,6 +58,22 @@
             android:layout_height="wrap_content"
             android:background="@color/white"></androidx.viewpager.widget.PagerTabStrip>
 
+<!--        <com.google.android.material.tabs.TabLayout-->
+
+<!--            android:id="@+id/tab_layout_day"-->
+<!--            android:layout_width="280dp"-->
+
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginLeft="57dp"-->
+<!--            app:tabTextAppearance="@style/TabLayoutTextSize"-->
+
+<!--            app:tabMode="scrollable"-->
+<!--            app:tabSelectedTextColor="@color/black"-->
+<!--            app:tabIndicatorColor="@color/black"-->
+<!--            app:tabBackground="@color/white"-->
+<!--            app:tabTextColor="@color/black" />-->
+
     </androidx.viewpager.widget.ViewPager>
 
 

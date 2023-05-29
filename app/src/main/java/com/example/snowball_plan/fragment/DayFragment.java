@@ -92,10 +92,15 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
 
 
         initViewPager();
+        initFragment();
 
         //点击弹出对话框选择日期
         jumpto.setOnClickListener(this);
 
+
+    }
+
+    public void initFragment(){
 
     }
 

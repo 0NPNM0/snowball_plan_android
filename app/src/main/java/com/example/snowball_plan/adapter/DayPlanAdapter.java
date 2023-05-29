@@ -12,12 +12,17 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.snowball_plan.fragment.EveryDayFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DayPlanAdapter extends FragmentStatePagerAdapter {
 
     private final int mYear;
 //    private final int mMonth;
 
     private Context context;
+
+    List<Fragment> fragmentList = new ArrayList<>();
 
     public DayPlanAdapter(@NonNull FragmentManager fm, int year) {
         super(fm,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
