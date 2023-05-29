@@ -1,12 +1,9 @@
 package com.example.snowball_plan.activity;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -26,6 +23,7 @@ import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
 import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.DayFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
+import com.example.snowball_plan.tools.DayDialog;
 import com.example.snowball_plan.tools.YearDialog;
 
 import java.util.ArrayList;
@@ -47,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText year_task_type,year_task_list,year_task_color;
 
     private CheckBox ione,itwo,ithree,ifour,ifive,isix,iseven,ieight,inine,iten,ieleven,itwelve;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,12 +81,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (ivCurrent == ivDay) {
-            Intent intent = new Intent(this, DayActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
+            DayDialog dialog = new DayDialog(this);
+            dialog.show();
         }
-    }
 
+    }
 
     private void initPager() {
         mviewPagerYear = findViewById(R.id.vp_year);

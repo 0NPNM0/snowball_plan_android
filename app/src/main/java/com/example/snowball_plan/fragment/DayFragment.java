@@ -86,7 +86,6 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
         calendar = Calendar.getInstance();
         tv_month.setText(DateUtil.getDate(calendar));
 
-
         dbHelper = DayPlanDBHelper.getInstance(this.getContext());
         dbHelper.openReadLink();
         dbHelper.openWriteLink();
@@ -100,7 +99,7 @@ public class DayFragment extends Fragment implements View.OnClickListener, DateP
 
     }
 
-//    初始化翻页视图
+    //    初始化翻页视图
     public void initViewPager() {
 
         PagerTabStrip pts = getView().findViewById(R.id.day_pick);

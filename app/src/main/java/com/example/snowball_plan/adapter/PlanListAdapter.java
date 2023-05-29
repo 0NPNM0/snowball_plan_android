@@ -1,13 +1,18 @@
 package com.example.snowball_plan.adapter;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -18,8 +23,10 @@ import com.example.snowball_plan.database.DayPlanDBHelper;
 import com.example.snowball_plan.entity.DayPlan;
 import com.example.snowball_plan.tools.ColorSelector;
 import com.example.snowball_plan.tools.ConfirmDialog;
+import com.example.snowball_plan.tools.DateUtil;
 import com.example.snowball_plan.tools.EditDialog;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class PlanListAdapter extends BaseAdapter{
@@ -199,12 +206,17 @@ public class PlanListAdapter extends BaseAdapter{
                     tab26, tab27, tab28, tab29, tab30,
                     tab31, tab32, tab33, tab34, tab35, isCurrent;
             private boolean hasColor = false;
+            private ImageView add;
+            private Calendar calendar;
 
 //            private EditText tv_date;
             @Override
             public void onClick(View v) {
                 editDialog.show();
                 editDialog.setContentView(R.layout.edit_dialog);
+
+                add = editDialog.findViewById(R.id.add);
+                add.setOnClickListener(this::onClickEdit);
 
                 timepicker_end = editDialog.findViewById(R.id.timepicker_end);
                 timepicker_end.setIs24HourView(true);
@@ -287,7 +299,8 @@ public class PlanListAdapter extends BaseAdapter{
                 });
 
                 tv_date = editDialog.findViewById(R.id.tv_date);
-                tv_date.setText(holder.date.getText());
+                calendar = Calendar.getInstance();
+                tv_date.setText(DateUtil.getDate(calendar));
 
                 day_task_type = editDialog.findViewById(R.id.day_task_type);
                 day_task_type.setText(holder.type.getText());
@@ -1050,6 +1063,34 @@ public class PlanListAdapter extends BaseAdapter{
                         }
                     }
                 });
+            }
+
+            public void onClickEdit(View v) {
+                if(R.id.add == v.getId()){
+                    DatePickerDialog dialog =new DatePickerDialog(mContext, R.style.ThemeDialog,this::onDateSet,
+                            calendar.get(Calendar.YEAR),
+                            calendar.get(Calendar.MONTH),
+                            calendar.get(Calendar.DAY_OF_MONTH));
+                    dialog.show();
+
+                    Button button_yes = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                    button_yes.setText("确定");
+                    button_yes.setTextSize(20);
+                    button_yes.setTextColor(Color.BLACK);
+
+
+                    Button button_no = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+                    button_no.setText("取消");
+                    button_no.setTextSize(20);
+                    button_no.setTextColor(Color.BLACK);
+                }
+            }
+
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                tv_date.setText(DateUtil.getDate(calendar));
             }
         });
 

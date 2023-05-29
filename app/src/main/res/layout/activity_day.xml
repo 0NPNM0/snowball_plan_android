@@ -3,18 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.InsertActivity"
+    android:layout_height="620dp"
     android:orientation="vertical"
     style="@style/recy_vertical_style">
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/scoll_year"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/scoll_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical"
@@ -28,7 +27,7 @@
             android:orientation="horizontal"
             android:background="@color/white"
             android:fillViewport="true"
-            android:layout_marginTop="45dp">
+            android:layout_marginTop="15dp">
 
             <TextView
                 android:id="@+id/tv_date"
@@ -135,7 +134,7 @@
                 android:text="@string/plan_type"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="117dp"
+                android:layout_marginLeft="95dp"
                 android:layout_marginTop="0dp"></TextView>
 
             <EditText
@@ -154,7 +153,7 @@
                 android:text="@string/plan_list"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="117dp"
+                android:layout_marginLeft="95dp"
                 android:layout_marginTop="10dp"></TextView>
 
             <EditText
@@ -216,7 +215,7 @@
                 android:text="@string/color_title"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="152dp"
+                android:layout_marginLeft="130dp"
                 android:layout_marginTop="10dp"></TextView>
 
             <include

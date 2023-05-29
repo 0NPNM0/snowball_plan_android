@@ -18,19 +18,48 @@
             android:fillViewport="true">
 
 
-                <EditText
+<!--                <EditText-->
+<!--                    android:id="@+id/tv_date"-->
+<!--                    android:layout_width="260dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:paddingTop="1dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:text="2023-05-22"-->
+<!--                    android:textColor="@color/red"-->
+<!--                    android:textSize="30sp">-->
+<!--                </EditText>-->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:layout_marginTop="15dp">
+
+                <TextView
                     android:id="@+id/tv_date"
                     android:layout_width="260dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:paddingTop="1dp"
-                    android:layout_marginTop="20dp"
                     android:background="@color/white"
                     android:gravity="center_horizontal"
                     android:text="2023-05-22"
                     android:textColor="@color/red"
                     android:textSize="30sp">
-                </EditText>
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit"></ImageView>
+            </LinearLayout>
 
 
             <LinearLayout
@@ -94,7 +123,7 @@
                 android:text="@string/plan_type"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="97dp"
+                android:layout_marginLeft="95dp"
                 android:layout_marginTop="0dp"></TextView>
 
             <EditText
@@ -113,7 +142,7 @@
                 android:text="@string/plan_list"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="97dp"
+                android:layout_marginLeft="95dp"
                 android:layout_marginTop="10dp"></TextView>
 
             <EditText
@@ -133,7 +162,7 @@
                 android:text="@string/color_title"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:layout_marginLeft="132dp"
+                android:layout_marginLeft="130dp"
                 android:layout_marginTop="10dp"></TextView>
 
             <include

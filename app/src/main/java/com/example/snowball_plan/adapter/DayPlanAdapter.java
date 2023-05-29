@@ -43,7 +43,7 @@ public class DayPlanAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 31;
+        return 12;
     }
 
     @Nullable

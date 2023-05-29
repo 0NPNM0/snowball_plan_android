@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/o_three"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="20dp">
 
         <ImageButton
             android:id="@+id/edit"

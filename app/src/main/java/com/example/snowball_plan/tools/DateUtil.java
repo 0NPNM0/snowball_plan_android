@@ -22,4 +22,10 @@ public class DateUtil {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
         return simpleDateFormat.format(date);
     }
+
+    public static SimpleDateFormat getNow(Calendar calendar){
+        Date date = calendar.getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return simpleDateFormat;
+    }
 }
