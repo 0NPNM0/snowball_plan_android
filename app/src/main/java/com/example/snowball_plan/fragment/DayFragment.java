@@ -58,7 +58,22 @@ public class DayFragment extends Fragment {
 
             calendar901,calendar902,calendar903,calendar904,calendar905,calendar906,calendar907,calendar908,calendar909,calendar910,
             calendar911,calendar912,calendar913,calendar914,calendar915,calendar916,calendar917,calendar918,calendar919,calendar920,
-            calendar921,calendar922,calendar923,calendar924,calendar925,calendar926,calendar927,calendar928,calendar929,calendar930;
+            calendar921,calendar922,calendar923,calendar924,calendar925,calendar926,calendar927,calendar928,calendar929,calendar930,
+
+
+            calendar1001,calendar1002,calendar1003,calendar1004,calendar1005,calendar1006,calendar1007,calendar1008,calendar1009,calendar1010,
+            calendar1011,calendar1012,calendar1013,calendar1014,calendar1015,calendar1016,calendar1017,calendar1018,calendar1019,calendar1020,
+            calendar1021,calendar1022,calendar1023,calendar1024,calendar1025,calendar1026,calendar1027,calendar1028,calendar1029,calendar1030,calendar1031,
+
+
+            calendar1101,calendar1102,calendar1103,calendar1104,calendar1105,calendar1106,calendar1107,calendar1108,calendar1109,calendar1110,
+            calendar1111,calendar1112,calendar1113,calendar1114,calendar1115,calendar1116,calendar1117,calendar1118,calendar1119,calendar1120,
+            calendar1121,calendar1122,calendar1123,calendar1124,calendar1125,calendar1126,calendar1127,calendar1128,calendar1129,calendar1130,
+
+
+            calendar1201,calendar1202,calendar1203,calendar1204,calendar1205,calendar1206,calendar1207,calendar1208,calendar1209,calendar1210,
+            calendar1211,calendar1212,calendar1213,calendar1214,calendar1215,calendar1216,calendar1217,calendar1218,calendar1219,calendar1220,
+            calendar1221,calendar1222,calendar1223,calendar1224,calendar1225,calendar1226,calendar1227,calendar1228,calendar1229,calendar1230,calendar1231;
 
     private DatePickerDialog dialog;
 
@@ -917,6 +932,488 @@ public class DayFragment extends Fragment {
         calendar930.set(Calendar.DAY_OF_MONTH,30);
 
 
+
+
+
+        calendar1001 = Calendar.getInstance();
+        calendar1001.set(Calendar.YEAR,2023);
+        calendar1001.set(Calendar.MONTH,9);
+        calendar1001.set(Calendar.DAY_OF_MONTH,1);
+
+        calendar1002 = Calendar.getInstance();
+        calendar1002.set(Calendar.YEAR,2023);
+        calendar1002.set(Calendar.MONTH,9);
+        calendar1002.set(Calendar.DAY_OF_MONTH,2);
+
+        calendar1003 = Calendar.getInstance();
+        calendar1003.set(Calendar.YEAR,2023);
+        calendar1003.set(Calendar.MONTH,9);
+        calendar1003.set(Calendar.DAY_OF_MONTH,3);
+
+        calendar1004 = Calendar.getInstance();
+        calendar1004.set(Calendar.YEAR,2023);
+        calendar1004.set(Calendar.MONTH,9);
+        calendar1004.set(Calendar.DAY_OF_MONTH,4);
+
+        calendar1005 = Calendar.getInstance();
+        calendar1005.set(Calendar.YEAR,2023);
+        calendar1005.set(Calendar.MONTH,9);
+        calendar1005.set(Calendar.DAY_OF_MONTH,5);
+
+        calendar1006 = Calendar.getInstance();
+        calendar1006.set(Calendar.YEAR,2023);
+        calendar1006.set(Calendar.MONTH,9);
+        calendar1006.set(Calendar.DAY_OF_MONTH,6);
+
+        calendar1007 = Calendar.getInstance();
+        calendar1007.set(Calendar.YEAR,2023);
+        calendar1007.set(Calendar.MONTH,9);
+        calendar1007.set(Calendar.DAY_OF_MONTH,7);
+
+
+        calendar1008 = Calendar.getInstance();
+        calendar1008.set(Calendar.YEAR,2023);
+        calendar1008.set(Calendar.MONTH,9);
+        calendar1008.set(Calendar.DAY_OF_MONTH,8);
+
+        calendar1009 = Calendar.getInstance();
+        calendar1009.set(Calendar.YEAR,2023);
+        calendar1009.set(Calendar.MONTH,9);
+        calendar1009.set(Calendar.DAY_OF_MONTH,9);
+
+        calendar1010 = Calendar.getInstance();
+        calendar1010.set(Calendar.YEAR,2023);
+        calendar1010.set(Calendar.MONTH,9);
+        calendar1010.set(Calendar.DAY_OF_MONTH,10);
+
+        calendar1011 = Calendar.getInstance();
+        calendar1011.set(Calendar.YEAR,2023);
+        calendar1011.set(Calendar.MONTH,9);
+        calendar1011.set(Calendar.DAY_OF_MONTH,11);
+
+        calendar1012 = Calendar.getInstance();
+        calendar1012.set(Calendar.YEAR,2023);
+        calendar1012.set(Calendar.MONTH,9);
+        calendar1012.set(Calendar.DAY_OF_MONTH,12);
+
+        calendar1013 = Calendar.getInstance();
+        calendar1013.set(Calendar.YEAR,2023);
+        calendar1013.set(Calendar.MONTH,9);
+        calendar1013.set(Calendar.DAY_OF_MONTH,13);
+
+        calendar1014 = Calendar.getInstance();
+        calendar1014.set(Calendar.YEAR,2023);
+        calendar1014.set(Calendar.MONTH,9);
+        calendar1014.set(Calendar.DAY_OF_MONTH,14);
+
+        calendar1015 = Calendar.getInstance();
+        calendar1015.set(Calendar.YEAR,2023);
+        calendar1015.set(Calendar.MONTH,9);
+        calendar1015.set(Calendar.DAY_OF_MONTH,15);
+
+        calendar1016 = Calendar.getInstance();
+        calendar1016.set(Calendar.YEAR,2023);
+        calendar1016.set(Calendar.MONTH,9);
+        calendar1016.set(Calendar.DAY_OF_MONTH,16);
+
+        calendar1017 = Calendar.getInstance();
+        calendar1017.set(Calendar.YEAR,2023);
+        calendar1017.set(Calendar.MONTH,9);
+        calendar1017.set(Calendar.DAY_OF_MONTH,17);
+
+
+        calendar1018 = Calendar.getInstance();
+        calendar1018.set(Calendar.YEAR,2023);
+        calendar1018.set(Calendar.MONTH,9);
+        calendar1018.set(Calendar.DAY_OF_MONTH,18);
+
+        calendar1019 = Calendar.getInstance();
+        calendar1019.set(Calendar.YEAR,2023);
+        calendar1019.set(Calendar.MONTH,9);
+        calendar1019.set(Calendar.DAY_OF_MONTH,19);
+
+        calendar1020 = Calendar.getInstance();
+        calendar1020.set(Calendar.YEAR,2023);
+        calendar1020.set(Calendar.MONTH,9);
+        calendar1020.set(Calendar.DAY_OF_MONTH,20);
+
+        calendar1021 = Calendar.getInstance();
+        calendar1021.set(Calendar.YEAR,2023);
+        calendar1021.set(Calendar.MONTH,9);
+        calendar1021.set(Calendar.DAY_OF_MONTH,21);
+
+        calendar1022 = Calendar.getInstance();
+        calendar1022.set(Calendar.YEAR,2023);
+        calendar1022.set(Calendar.MONTH,9);
+        calendar1022.set(Calendar.DAY_OF_MONTH,22);
+
+        calendar1023 = Calendar.getInstance();
+        calendar1023.set(Calendar.YEAR,2023);
+        calendar1023.set(Calendar.MONTH,9);
+        calendar1023.set(Calendar.DAY_OF_MONTH,23);
+
+        calendar1024 = Calendar.getInstance();
+        calendar1024.set(Calendar.YEAR,2023);
+        calendar1024.set(Calendar.MONTH,9);
+        calendar1024.set(Calendar.DAY_OF_MONTH,24);
+
+
+        calendar1025 = Calendar.getInstance();
+        calendar1025.set(Calendar.YEAR,2023);
+        calendar1025.set(Calendar.MONTH,9);
+        calendar1025.set(Calendar.DAY_OF_MONTH,25);
+
+
+        calendar1026 = Calendar.getInstance();
+        calendar1026.set(Calendar.YEAR,2023);
+        calendar1026.set(Calendar.MONTH,9);
+        calendar1026.set(Calendar.DAY_OF_MONTH,26);
+
+        calendar1027 = Calendar.getInstance();
+        calendar1027.set(Calendar.YEAR,2023);
+        calendar1027.set(Calendar.MONTH,9);
+        calendar1027.set(Calendar.DAY_OF_MONTH,27);
+
+        calendar1028 = Calendar.getInstance();
+        calendar1028.set(Calendar.YEAR,2023);
+        calendar1028.set(Calendar.MONTH,9);
+        calendar1028.set(Calendar.DAY_OF_MONTH,28);
+
+        calendar1029 = Calendar.getInstance();
+        calendar1029.set(Calendar.YEAR,2023);
+        calendar1029.set(Calendar.MONTH,9);
+        calendar1029.set(Calendar.DAY_OF_MONTH,29);
+
+        calendar1030 = Calendar.getInstance();
+        calendar1030.set(Calendar.YEAR,2023);
+        calendar1030.set(Calendar.MONTH,9);
+        calendar1030.set(Calendar.DAY_OF_MONTH,30);
+
+        calendar1031 = Calendar.getInstance();
+        calendar1031.set(Calendar.YEAR,2023);
+        calendar1031.set(Calendar.MONTH,9);
+        calendar1031.set(Calendar.DAY_OF_MONTH,31);
+
+
+
+
+        calendar1101 = Calendar.getInstance();
+        calendar1101.set(Calendar.YEAR,2023);
+        calendar1101.set(Calendar.MONTH,10);
+        calendar1101.set(Calendar.DAY_OF_MONTH,1);
+
+        calendar1102 = Calendar.getInstance();
+        calendar1102.set(Calendar.YEAR,2023);
+        calendar1102.set(Calendar.MONTH,10);
+        calendar1102.set(Calendar.DAY_OF_MONTH,2);
+
+        calendar1103 = Calendar.getInstance();
+        calendar1103.set(Calendar.YEAR,2023);
+        calendar1103.set(Calendar.MONTH,10);
+        calendar1103.set(Calendar.DAY_OF_MONTH,3);
+
+        calendar1104 = Calendar.getInstance();
+        calendar1104.set(Calendar.YEAR,2023);
+        calendar1104.set(Calendar.MONTH,10);
+        calendar1104.set(Calendar.DAY_OF_MONTH,4);
+
+        calendar1105 = Calendar.getInstance();
+        calendar1105.set(Calendar.YEAR,2023);
+        calendar1105.set(Calendar.MONTH,10);
+        calendar1105.set(Calendar.DAY_OF_MONTH,5);
+
+        calendar1106 = Calendar.getInstance();
+        calendar1106.set(Calendar.YEAR,2023);
+        calendar1106.set(Calendar.MONTH,10);
+        calendar1106.set(Calendar.DAY_OF_MONTH,6);
+
+        calendar1107 = Calendar.getInstance();
+        calendar1107.set(Calendar.YEAR,2023);
+        calendar1107.set(Calendar.MONTH,10);
+        calendar1107.set(Calendar.DAY_OF_MONTH,7);
+
+
+        calendar1108 = Calendar.getInstance();
+        calendar1108.set(Calendar.YEAR,2023);
+        calendar1108.set(Calendar.MONTH,10);
+        calendar1108.set(Calendar.DAY_OF_MONTH,8);
+
+        calendar1109 = Calendar.getInstance();
+        calendar1109.set(Calendar.YEAR,2023);
+        calendar1109.set(Calendar.MONTH,10);
+        calendar1109.set(Calendar.DAY_OF_MONTH,9);
+
+        calendar1110 = Calendar.getInstance();
+        calendar1110.set(Calendar.YEAR,2023);
+        calendar1110.set(Calendar.MONTH,10);
+        calendar1110.set(Calendar.DAY_OF_MONTH,10);
+
+        calendar1111 = Calendar.getInstance();
+        calendar1111.set(Calendar.YEAR,2023);
+        calendar1111.set(Calendar.MONTH,10);
+        calendar1111.set(Calendar.DAY_OF_MONTH,11);
+
+        calendar1112 = Calendar.getInstance();
+        calendar1112.set(Calendar.YEAR,2023);
+        calendar1112.set(Calendar.MONTH,10);
+        calendar1112.set(Calendar.DAY_OF_MONTH,12);
+
+        calendar1113 = Calendar.getInstance();
+        calendar1113.set(Calendar.YEAR,2023);
+        calendar1113.set(Calendar.MONTH,10);
+        calendar1113.set(Calendar.DAY_OF_MONTH,13);
+
+        calendar1114 = Calendar.getInstance();
+        calendar1114.set(Calendar.YEAR,2023);
+        calendar1114.set(Calendar.MONTH,10);
+        calendar1114.set(Calendar.DAY_OF_MONTH,14);
+
+        calendar1115 = Calendar.getInstance();
+        calendar1115.set(Calendar.YEAR,2023);
+        calendar1115.set(Calendar.MONTH,10);
+        calendar1115.set(Calendar.DAY_OF_MONTH,15);
+
+        calendar1116 = Calendar.getInstance();
+        calendar1116.set(Calendar.YEAR,2023);
+        calendar1116.set(Calendar.MONTH,10);
+        calendar1116.set(Calendar.DAY_OF_MONTH,16);
+
+        calendar1117 = Calendar.getInstance();
+        calendar1117.set(Calendar.YEAR,2023);
+        calendar1117.set(Calendar.MONTH,10);
+        calendar1117.set(Calendar.DAY_OF_MONTH,17);
+
+
+        calendar1118 = Calendar.getInstance();
+        calendar1118.set(Calendar.YEAR,2023);
+        calendar1118.set(Calendar.MONTH,10);
+        calendar1118.set(Calendar.DAY_OF_MONTH,18);
+
+        calendar1119 = Calendar.getInstance();
+        calendar1119.set(Calendar.YEAR,2023);
+        calendar1119.set(Calendar.MONTH,10);
+        calendar1119.set(Calendar.DAY_OF_MONTH,19);
+
+        calendar1120 = Calendar.getInstance();
+        calendar1120.set(Calendar.YEAR,2023);
+        calendar1120.set(Calendar.MONTH,10);
+        calendar1120.set(Calendar.DAY_OF_MONTH,20);
+
+        calendar1121 = Calendar.getInstance();
+        calendar1121.set(Calendar.YEAR,2023);
+        calendar1121.set(Calendar.MONTH,10);
+        calendar1121.set(Calendar.DAY_OF_MONTH,21);
+
+        calendar1122 = Calendar.getInstance();
+        calendar1122.set(Calendar.YEAR,2023);
+        calendar1122.set(Calendar.MONTH,10);
+        calendar1122.set(Calendar.DAY_OF_MONTH,22);
+
+        calendar1123 = Calendar.getInstance();
+        calendar1123.set(Calendar.YEAR,2023);
+        calendar1123.set(Calendar.MONTH,10);
+        calendar1123.set(Calendar.DAY_OF_MONTH,23);
+
+        calendar1124 = Calendar.getInstance();
+        calendar1124.set(Calendar.YEAR,2023);
+        calendar1124.set(Calendar.MONTH,10);
+        calendar1124.set(Calendar.DAY_OF_MONTH,24);
+
+
+        calendar1125 = Calendar.getInstance();
+        calendar1125.set(Calendar.YEAR,2023);
+        calendar1125.set(Calendar.MONTH,10);
+        calendar1125.set(Calendar.DAY_OF_MONTH,25);
+
+
+        calendar1126 = Calendar.getInstance();
+        calendar1126.set(Calendar.YEAR,2023);
+        calendar1126.set(Calendar.MONTH,10);
+        calendar1126.set(Calendar.DAY_OF_MONTH,26);
+
+        calendar1127 = Calendar.getInstance();
+        calendar1127.set(Calendar.YEAR,2023);
+        calendar1127.set(Calendar.MONTH,10);
+        calendar1127.set(Calendar.DAY_OF_MONTH,27);
+
+        calendar1128 = Calendar.getInstance();
+        calendar1128.set(Calendar.YEAR,2023);
+        calendar1128.set(Calendar.MONTH,10);
+        calendar1128.set(Calendar.DAY_OF_MONTH,28);
+
+        calendar1129 = Calendar.getInstance();
+        calendar1129.set(Calendar.YEAR,2023);
+        calendar1129.set(Calendar.MONTH,10);
+        calendar1129.set(Calendar.DAY_OF_MONTH,29);
+
+        calendar1130 = Calendar.getInstance();
+        calendar1130.set(Calendar.YEAR,2023);
+        calendar1130.set(Calendar.MONTH,10);
+        calendar1130.set(Calendar.DAY_OF_MONTH,30);
+
+
+
+
+        calendar1201 = Calendar.getInstance();
+        calendar1201.set(Calendar.YEAR,2023);
+        calendar1201.set(Calendar.MONTH,11);
+        calendar1201.set(Calendar.DAY_OF_MONTH,1);
+
+        calendar1202 = Calendar.getInstance();
+        calendar1202.set(Calendar.YEAR,2023);
+        calendar1202.set(Calendar.MONTH,11);
+        calendar1202.set(Calendar.DAY_OF_MONTH,2);
+
+        calendar1203 = Calendar.getInstance();
+        calendar1203.set(Calendar.YEAR,2023);
+        calendar1203.set(Calendar.MONTH,11);
+        calendar1203.set(Calendar.DAY_OF_MONTH,3);
+
+        calendar1204 = Calendar.getInstance();
+        calendar1204.set(Calendar.YEAR,2023);
+        calendar1204.set(Calendar.MONTH,11);
+        calendar1204.set(Calendar.DAY_OF_MONTH,4);
+
+        calendar1205 = Calendar.getInstance();
+        calendar1205.set(Calendar.YEAR,2023);
+        calendar1205.set(Calendar.MONTH,11);
+        calendar1205.set(Calendar.DAY_OF_MONTH,5);
+
+        calendar1206 = Calendar.getInstance();
+        calendar1206.set(Calendar.YEAR,2023);
+        calendar1206.set(Calendar.MONTH,11);
+        calendar1206.set(Calendar.DAY_OF_MONTH,6);
+
+        calendar1207 = Calendar.getInstance();
+        calendar1207.set(Calendar.YEAR,2023);
+        calendar1207.set(Calendar.MONTH,11);
+        calendar1207.set(Calendar.DAY_OF_MONTH,7);
+
+
+        calendar1208 = Calendar.getInstance();
+        calendar1208.set(Calendar.YEAR,2023);
+        calendar1208.set(Calendar.MONTH,11);
+        calendar1208.set(Calendar.DAY_OF_MONTH,8);
+
+        calendar1209 = Calendar.getInstance();
+        calendar1209.set(Calendar.YEAR,2023);
+        calendar1209.set(Calendar.MONTH,11);
+        calendar1209.set(Calendar.DAY_OF_MONTH,9);
+
+        calendar1210 = Calendar.getInstance();
+        calendar1210.set(Calendar.YEAR,2023);
+        calendar1210.set(Calendar.MONTH,11);
+        calendar1210.set(Calendar.DAY_OF_MONTH,10);
+
+        calendar1211 = Calendar.getInstance();
+        calendar1211.set(Calendar.YEAR,2023);
+        calendar1211.set(Calendar.MONTH,11);
+        calendar1211.set(Calendar.DAY_OF_MONTH,11);
+
+        calendar1212 = Calendar.getInstance();
+        calendar1212.set(Calendar.YEAR,2023);
+        calendar1212.set(Calendar.MONTH,11);
+        calendar1212.set(Calendar.DAY_OF_MONTH,12);
+
+        calendar1213 = Calendar.getInstance();
+        calendar1213.set(Calendar.YEAR,2023);
+        calendar1213.set(Calendar.MONTH,11);
+        calendar1213.set(Calendar.DAY_OF_MONTH,13);
+
+        calendar1214 = Calendar.getInstance();
+        calendar1214.set(Calendar.YEAR,2023);
+        calendar1214.set(Calendar.MONTH,11);
+        calendar1214.set(Calendar.DAY_OF_MONTH,14);
+
+        calendar1215 = Calendar.getInstance();
+        calendar1215.set(Calendar.YEAR,2023);
+        calendar1215.set(Calendar.MONTH,11);
+        calendar1215.set(Calendar.DAY_OF_MONTH,15);
+
+        calendar1216 = Calendar.getInstance();
+        calendar1216.set(Calendar.YEAR,2023);
+        calendar1216.set(Calendar.MONTH,11);
+        calendar1216.set(Calendar.DAY_OF_MONTH,16);
+
+        calendar1217 = Calendar.getInstance();
+        calendar1217.set(Calendar.YEAR,2023);
+        calendar1217.set(Calendar.MONTH,11);
+        calendar1217.set(Calendar.DAY_OF_MONTH,17);
+
+
+        calendar1218 = Calendar.getInstance();
+        calendar1218.set(Calendar.YEAR,2023);
+        calendar1218.set(Calendar.MONTH,11);
+        calendar1218.set(Calendar.DAY_OF_MONTH,18);
+
+        calendar1219 = Calendar.getInstance();
+        calendar1219.set(Calendar.YEAR,2023);
+        calendar1219.set(Calendar.MONTH,11);
+        calendar1219.set(Calendar.DAY_OF_MONTH,19);
+
+        calendar1220 = Calendar.getInstance();
+        calendar1220.set(Calendar.YEAR,2023);
+        calendar1220.set(Calendar.MONTH,11);
+        calendar1220.set(Calendar.DAY_OF_MONTH,20);
+
+        calendar1221 = Calendar.getInstance();
+        calendar1221.set(Calendar.YEAR,2023);
+        calendar1221.set(Calendar.MONTH,11);
+        calendar1221.set(Calendar.DAY_OF_MONTH,21);
+
+        calendar1222 = Calendar.getInstance();
+        calendar1222.set(Calendar.YEAR,2023);
+        calendar1222.set(Calendar.MONTH,11);
+        calendar1222.set(Calendar.DAY_OF_MONTH,22);
+
+        calendar1223 = Calendar.getInstance();
+        calendar1223.set(Calendar.YEAR,2023);
+        calendar1223.set(Calendar.MONTH,11);
+        calendar1223.set(Calendar.DAY_OF_MONTH,23);
+
+        calendar1224 = Calendar.getInstance();
+        calendar1224.set(Calendar.YEAR,2023);
+        calendar1224.set(Calendar.MONTH,11);
+        calendar1224.set(Calendar.DAY_OF_MONTH,24);
+
+
+        calendar1225 = Calendar.getInstance();
+        calendar1225.set(Calendar.YEAR,2023);
+        calendar1225.set(Calendar.MONTH,11);
+        calendar1225.set(Calendar.DAY_OF_MONTH,25);
+
+
+        calendar1226 = Calendar.getInstance();
+        calendar1226.set(Calendar.YEAR,2023);
+        calendar1226.set(Calendar.MONTH,11);
+        calendar1226.set(Calendar.DAY_OF_MONTH,26);
+
+        calendar1227 = Calendar.getInstance();
+        calendar1227.set(Calendar.YEAR,2023);
+        calendar1227.set(Calendar.MONTH,11);
+        calendar1227.set(Calendar.DAY_OF_MONTH,27);
+
+        calendar1228 = Calendar.getInstance();
+        calendar1228.set(Calendar.YEAR,2023);
+        calendar1228.set(Calendar.MONTH,11);
+        calendar1228.set(Calendar.DAY_OF_MONTH,28);
+
+        calendar1229 = Calendar.getInstance();
+        calendar1229.set(Calendar.YEAR,2023);
+        calendar1229.set(Calendar.MONTH,11);
+        calendar1229.set(Calendar.DAY_OF_MONTH,29);
+
+        calendar1230 = Calendar.getInstance();
+        calendar1230.set(Calendar.YEAR,2023);
+        calendar1230.set(Calendar.MONTH,11);
+        calendar1230.set(Calendar.DAY_OF_MONTH,30);
+
+        calendar1231 = Calendar.getInstance();
+        calendar1231.set(Calendar.YEAR,2023);
+        calendar1231.set(Calendar.MONTH,11);
+        calendar1231.set(Calendar.DAY_OF_MONTH,31);
+
+
 //      tv_month.setText(DateUtil.getDate(calendarNow));
 
         dbHelper = DayPlanDBHelper.getInstance(this.getContext());
@@ -1129,6 +1626,111 @@ public class DayFragment extends Fragment {
         EveryDayFragment fragment930 = EveryDayFragment.newInstance(DateUtil.getDate(calendar930));
 
 
+
+
+        EveryDayFragment fragment1001 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1001));
+        EveryDayFragment fragment1002 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1002));
+        EveryDayFragment fragment1003 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1003));
+        EveryDayFragment fragment1004 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1004));
+        EveryDayFragment fragment1005 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1005));
+        EveryDayFragment fragment1006 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1006));
+        EveryDayFragment fragment1007 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1007));
+        EveryDayFragment fragment1008 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1008));
+        EveryDayFragment fragment1009 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1009));
+        EveryDayFragment fragment1010 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1010));
+        EveryDayFragment fragment1011 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1011));
+        EveryDayFragment fragment1012 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1012));
+        EveryDayFragment fragment1013 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1013));
+        EveryDayFragment fragment1014 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1014));
+        EveryDayFragment fragment1015 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1015));
+        EveryDayFragment fragment1016 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1016));
+        EveryDayFragment fragment1017 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1017));
+        EveryDayFragment fragment1018 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1018));
+        EveryDayFragment fragment1019 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1019));
+        EveryDayFragment fragment1020 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1020));
+        EveryDayFragment fragment1021 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1021));
+        EveryDayFragment fragment1022 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1022));
+        EveryDayFragment fragment1023 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1023));
+        EveryDayFragment fragment1024 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1024));
+        EveryDayFragment fragment1025 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1025));
+        EveryDayFragment fragment1026 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1026));
+        EveryDayFragment fragment1027 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1027));
+        EveryDayFragment fragment1028 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1028));
+        EveryDayFragment fragment1029 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1029));
+        EveryDayFragment fragment1030 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1030));
+        EveryDayFragment fragment1031 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1031));
+
+
+
+
+        EveryDayFragment fragment1101 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1101));
+        EveryDayFragment fragment1102 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1102));
+        EveryDayFragment fragment1103 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1103));
+        EveryDayFragment fragment1104 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1104));
+        EveryDayFragment fragment1105 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1105));
+        EveryDayFragment fragment1106 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1106));
+        EveryDayFragment fragment1107 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1107));
+        EveryDayFragment fragment1108 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1108));
+        EveryDayFragment fragment1109 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1109));
+        EveryDayFragment fragment1110 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1110));
+        EveryDayFragment fragment1111 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1111));
+        EveryDayFragment fragment1112 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1112));
+        EveryDayFragment fragment1113 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1113));
+        EveryDayFragment fragment1114 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1114));
+        EveryDayFragment fragment1115 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1115));
+        EveryDayFragment fragment1116 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1116));
+        EveryDayFragment fragment1117 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1117));
+        EveryDayFragment fragment1118 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1118));
+        EveryDayFragment fragment1119 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1119));
+        EveryDayFragment fragment1120 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1120));
+        EveryDayFragment fragment1121 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1121));
+        EveryDayFragment fragment1122 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1122));
+        EveryDayFragment fragment1123 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1123));
+        EveryDayFragment fragment1124 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1124));
+        EveryDayFragment fragment1125 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1125));
+        EveryDayFragment fragment1126 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1126));
+        EveryDayFragment fragment1127 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1127));
+        EveryDayFragment fragment1128 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1128));
+        EveryDayFragment fragment1129 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1129));
+        EveryDayFragment fragment1130 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1130));
+
+
+
+
+        EveryDayFragment fragment1201 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1201));
+        EveryDayFragment fragment1202 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1202));
+        EveryDayFragment fragment1203 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1203));
+        EveryDayFragment fragment1204 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1204));
+        EveryDayFragment fragment1205 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1205));
+        EveryDayFragment fragment1206 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1206));
+        EveryDayFragment fragment1207 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1207));
+        EveryDayFragment fragment1208 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1208));
+        EveryDayFragment fragment1209 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1209));
+        EveryDayFragment fragment1210 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1210));
+        EveryDayFragment fragment1211 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1211));
+        EveryDayFragment fragment1212 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1212));
+        EveryDayFragment fragment1213 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1213));
+        EveryDayFragment fragment1214 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1214));
+        EveryDayFragment fragment1215 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1215));
+        EveryDayFragment fragment1216 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1216));
+        EveryDayFragment fragment1217 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1217));
+        EveryDayFragment fragment1218 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1218));
+        EveryDayFragment fragment1219 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1219));
+        EveryDayFragment fragment1220 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1220));
+        EveryDayFragment fragment1221 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1221));
+        EveryDayFragment fragment1222 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1222));
+        EveryDayFragment fragment1223 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1223));
+        EveryDayFragment fragment1224 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1224));
+        EveryDayFragment fragment1225 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1225));
+        EveryDayFragment fragment1226 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1226));
+        EveryDayFragment fragment1227 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1227));
+        EveryDayFragment fragment1228 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1228));
+        EveryDayFragment fragment1229 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1229));
+        EveryDayFragment fragment1230 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1230));
+        EveryDayFragment fragment1231 = EveryDayFragment.newInstance(DateUtil.getDate(calendar1231));
+
+
+
         fragmentListDay.add(fragment501);
         fragmentListDay.add(fragment502);
         fragmentListDay.add(fragment503);
@@ -1263,7 +1865,6 @@ public class DayFragment extends Fragment {
 
 
 
-
         fragmentListDay.add(fragment901);
         fragmentListDay.add(fragment902);
         fragmentListDay.add(fragment903);
@@ -1294,6 +1895,108 @@ public class DayFragment extends Fragment {
         fragmentListDay.add(fragment928);
         fragmentListDay.add(fragment929);
         fragmentListDay.add(fragment930);
+
+
+
+        fragmentListDay.add(fragment1001);
+        fragmentListDay.add(fragment1002);
+        fragmentListDay.add(fragment1003);
+        fragmentListDay.add(fragment1004);
+        fragmentListDay.add(fragment1005);
+        fragmentListDay.add(fragment1006);
+        fragmentListDay.add(fragment1007);
+        fragmentListDay.add(fragment1008);
+        fragmentListDay.add(fragment1009);
+        fragmentListDay.add(fragment1010);
+        fragmentListDay.add(fragment1011);
+        fragmentListDay.add(fragment1012);
+        fragmentListDay.add(fragment1013);
+        fragmentListDay.add(fragment1014);
+        fragmentListDay.add(fragment1015);
+        fragmentListDay.add(fragment1016);
+        fragmentListDay.add(fragment1017);
+        fragmentListDay.add(fragment1018);
+        fragmentListDay.add(fragment1019);
+        fragmentListDay.add(fragment1020);
+        fragmentListDay.add(fragment1021);
+        fragmentListDay.add(fragment1022);
+        fragmentListDay.add(fragment1023);
+        fragmentListDay.add(fragment1024);
+        fragmentListDay.add(fragment1025);
+        fragmentListDay.add(fragment1026);
+        fragmentListDay.add(fragment1027);
+        fragmentListDay.add(fragment1028);
+        fragmentListDay.add(fragment1029);
+        fragmentListDay.add(fragment1030);
+        fragmentListDay.add(fragment1031);
+
+
+
+
+        fragmentListDay.add(fragment1101);
+        fragmentListDay.add(fragment1102);
+        fragmentListDay.add(fragment1103);
+        fragmentListDay.add(fragment1104);
+        fragmentListDay.add(fragment1105);
+        fragmentListDay.add(fragment1106);
+        fragmentListDay.add(fragment1107);
+        fragmentListDay.add(fragment1108);
+        fragmentListDay.add(fragment1109);
+        fragmentListDay.add(fragment1110);
+        fragmentListDay.add(fragment1111);
+        fragmentListDay.add(fragment1112);
+        fragmentListDay.add(fragment1113);
+        fragmentListDay.add(fragment1114);
+        fragmentListDay.add(fragment1115);
+        fragmentListDay.add(fragment1116);
+        fragmentListDay.add(fragment1117);
+        fragmentListDay.add(fragment1118);
+        fragmentListDay.add(fragment1119);
+        fragmentListDay.add(fragment1120);
+        fragmentListDay.add(fragment1121);
+        fragmentListDay.add(fragment1122);
+        fragmentListDay.add(fragment1123);
+        fragmentListDay.add(fragment1124);
+        fragmentListDay.add(fragment1125);
+        fragmentListDay.add(fragment1126);
+        fragmentListDay.add(fragment1127);
+        fragmentListDay.add(fragment1128);
+        fragmentListDay.add(fragment1129);
+        fragmentListDay.add(fragment1130);
+
+
+
+        fragmentListDay.add(fragment1201);
+        fragmentListDay.add(fragment1202);
+        fragmentListDay.add(fragment1203);
+        fragmentListDay.add(fragment1204);
+        fragmentListDay.add(fragment1205);
+        fragmentListDay.add(fragment1206);
+        fragmentListDay.add(fragment1207);
+        fragmentListDay.add(fragment1208);
+        fragmentListDay.add(fragment1209);
+        fragmentListDay.add(fragment1210);
+        fragmentListDay.add(fragment1211);
+        fragmentListDay.add(fragment1212);
+        fragmentListDay.add(fragment1213);
+        fragmentListDay.add(fragment1214);
+        fragmentListDay.add(fragment1215);
+        fragmentListDay.add(fragment1216);
+        fragmentListDay.add(fragment1217);
+        fragmentListDay.add(fragment1218);
+        fragmentListDay.add(fragment1219);
+        fragmentListDay.add(fragment1220);
+        fragmentListDay.add(fragment1221);
+        fragmentListDay.add(fragment1222);
+        fragmentListDay.add(fragment1223);
+        fragmentListDay.add(fragment1224);
+        fragmentListDay.add(fragment1225);
+        fragmentListDay.add(fragment1226);
+        fragmentListDay.add(fragment1227);
+        fragmentListDay.add(fragment1228);
+        fragmentListDay.add(fragment1229);
+        fragmentListDay.add(fragment1230);
+        fragmentListDay.add(fragment1231);
 
 
         mTitleListYear = new ArrayList<>();
@@ -1462,6 +2165,108 @@ public class DayFragment extends Fragment {
         mTitleListYear.add("2023-9-28");
         mTitleListYear.add("2023-9-29");
         mTitleListYear.add("2023-9-30");
+
+
+
+        mTitleListYear.add("2023-10-01");
+        mTitleListYear.add("2023-10-02");
+        mTitleListYear.add("2023-10-03");
+        mTitleListYear.add("2023-10-04");
+        mTitleListYear.add("2023-10-05");
+        mTitleListYear.add("2023-10-06");
+        mTitleListYear.add("2023-10-07");
+        mTitleListYear.add("2023-10-08");
+        mTitleListYear.add("2023-10-09");
+        mTitleListYear.add("2023-10-10");
+        mTitleListYear.add("2023-10-11");
+        mTitleListYear.add("2023-10-12");
+        mTitleListYear.add("2023-10-13");
+        mTitleListYear.add("2023-10-14");
+        mTitleListYear.add("2023-10-15");
+        mTitleListYear.add("2023-10-16");
+        mTitleListYear.add("2023-10-17");
+        mTitleListYear.add("2023-10-18");
+        mTitleListYear.add("2023-10-19");
+        mTitleListYear.add("2023-10-20");
+        mTitleListYear.add("2023-10-21");
+        mTitleListYear.add("2023-10-22");
+        mTitleListYear.add("2023-10-23");
+        mTitleListYear.add("2023-10-24");
+        mTitleListYear.add("2023-10-25");
+        mTitleListYear.add("2023-10-26");
+        mTitleListYear.add("2023-10-27");
+        mTitleListYear.add("2023-10-28");
+        mTitleListYear.add("2023-10-29");
+        mTitleListYear.add("2023-10-30");
+        mTitleListYear.add("2023-10-31");
+
+
+
+
+        mTitleListYear.add("2023-11-01");
+        mTitleListYear.add("2023-11-02");
+        mTitleListYear.add("2023-11-03");
+        mTitleListYear.add("2023-11-04");
+        mTitleListYear.add("2023-11-05");
+        mTitleListYear.add("2023-11-06");
+        mTitleListYear.add("2023-11-07");
+        mTitleListYear.add("2023-11-08");
+        mTitleListYear.add("2023-11-09");
+        mTitleListYear.add("2023-11-10");
+        mTitleListYear.add("2023-11-11");
+        mTitleListYear.add("2023-11-12");
+        mTitleListYear.add("2023-11-13");
+        mTitleListYear.add("2023-11-14");
+        mTitleListYear.add("2023-11-15");
+        mTitleListYear.add("2023-11-16");
+        mTitleListYear.add("2023-11-17");
+        mTitleListYear.add("2023-11-18");
+        mTitleListYear.add("2023-11-19");
+        mTitleListYear.add("2023-11-20");
+        mTitleListYear.add("2023-11-21");
+        mTitleListYear.add("2023-11-22");
+        mTitleListYear.add("2023-11-23");
+        mTitleListYear.add("2023-11-24");
+        mTitleListYear.add("2023-11-25");
+        mTitleListYear.add("2023-11-26");
+        mTitleListYear.add("2023-11-27");
+        mTitleListYear.add("2023-11-28");
+        mTitleListYear.add("2023-11-29");
+        mTitleListYear.add("2023-11-30");
+
+
+
+        mTitleListYear.add("2023-12-01");
+        mTitleListYear.add("2023-12-02");
+        mTitleListYear.add("2023-12-03");
+        mTitleListYear.add("2023-12-04");
+        mTitleListYear.add("2023-12-05");
+        mTitleListYear.add("2023-12-06");
+        mTitleListYear.add("2023-12-07");
+        mTitleListYear.add("2023-12-08");
+        mTitleListYear.add("2023-12-09");
+        mTitleListYear.add("2023-12-10");
+        mTitleListYear.add("2023-12-11");
+        mTitleListYear.add("2023-12-12");
+        mTitleListYear.add("2023-12-13");
+        mTitleListYear.add("2023-12-14");
+        mTitleListYear.add("2023-12-15");
+        mTitleListYear.add("2023-12-16");
+        mTitleListYear.add("2023-12-17");
+        mTitleListYear.add("2023-12-18");
+        mTitleListYear.add("2023-12-19");
+        mTitleListYear.add("2023-12-20");
+        mTitleListYear.add("2023-12-21");
+        mTitleListYear.add("2023-12-22");
+        mTitleListYear.add("2023-12-23");
+        mTitleListYear.add("2023-12-24");
+        mTitleListYear.add("2023-12-25");
+        mTitleListYear.add("2023-12-26");
+        mTitleListYear.add("2023-12-27");
+        mTitleListYear.add("2023-12-28");
+        mTitleListYear.add("2023-12-29");
+        mTitleListYear.add("2023-12-30");
+        mTitleListYear.add("2023-12-31");
 
 
 
