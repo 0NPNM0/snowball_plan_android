@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:rowCount="8">
+
+    <CheckBox
+        android:id="@+id/mone"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/mone"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwo"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/mtwo"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mthree"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/mthree"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mfour"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mfour"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mfive"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mfive"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/msix"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/msix"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mseven"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mseven"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/meight"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/meight"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mnine"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mnine"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mten"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mten"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/meleven"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/meleven"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwelve"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwelve"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mthirteen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mthirteen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mfourteen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mfourteen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mfifteen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/msixteen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mseventeen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mseventeen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/meighteen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/meighteen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mnineteen"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mnineteen"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwenty"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwenty"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyOne"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mtwentyOne"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyTwo"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentyTwo"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyThree"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentyThree"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyFour"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentyFour"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyFive"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentyFive"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentySix"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentySix"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentySeven"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mtwentySeven"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyEight"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mtwentyEight"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mtwentyNine"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:text="@string/mtwentyNine"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/mthirty"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+
+        android:text="@string/mthirty"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:theme="@style/CheckBox"></CheckBox>
+
+
+</GridLayout>

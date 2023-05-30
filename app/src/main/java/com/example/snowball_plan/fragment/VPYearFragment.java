@@ -1,6 +1,7 @@
 package com.example.snowball_plan.fragment;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -33,9 +34,15 @@ public class VPYearFragment extends Fragment {
     private List<String> mTitleListYear;
     private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
 
+    private String desc;
+    private SharedCallBack callBack;
 
     public VPYearFragment() {
         // Required empty public constructor
+    }
+
+    public interface SharedCallBack{
+        void sendmsgtoMainactivity(String temperature);
     }
 
     public static VPYearFragment newInstance(String param1, String param2) {
@@ -53,6 +60,17 @@ public class VPYearFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof SharedCallBack) {
+            callBack = (SharedCallBack) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -79,6 +97,36 @@ public class VPYearFragment extends Fragment {
 
         mtablayoutYear.setupWithViewPager(mViewPagerYear);
         mtablayoutYear.getTabAt(3).select();
+        mtablayoutYear.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+
+
+            //加载完成
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                desc = String.valueOf(tab.getPosition()+2020);
+                //Toast.makeText(mContext, desc,Toast.LENGTH_SHORT).show();
+                //Bundle bundle=new Bundle();
+                //bundle.putString("year", String.valueOf(tab.getPosition()+2020));
+                //Intent intent=new Intent();
+                //intent.setClass(getActivity(),MainActivity.class);
+                //Bundle bundle=new Bundle();
+                //bundle.putString("year",desc);
+                //intent.putExtras(bundle);
+                //startActivity(intent);
+                callBack.sendmsgtoMainactivity(desc);
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     private void initYearFragmentData() {

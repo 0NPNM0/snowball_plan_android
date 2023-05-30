@@ -22,8 +22,10 @@ import com.example.snowball_plan.adapter.MyFragmentPagerAdapter;
 import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
 import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.DayFragment;
+import com.example.snowball_plan.fragment.MonthFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
 import com.example.snowball_plan.tools.DayDialog;
+import com.example.snowball_plan.tools.MonthDialog;
 import com.example.snowball_plan.tools.YearDialog;
 
 import java.util.ArrayList;
@@ -31,7 +33,7 @@ import java.util.List;
 
 import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,VPYearFragment.SharedCallBack{
 
     //年外fragment参数
     private ViewPager2 mviewPagerYear;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
 
+    private String data="2023";
 //    private MyDatabaseHelper myDatabaseHelper_t;
 
     private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
@@ -79,6 +82,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             YearDialog yearDialog = new YearDialog(this, R.style.BuildDialog);
             yearDialog.show();
         }
+        if (ivCurrent == ivMonth) {
+            MonthDialog monthDialog=new MonthDialog(this);
+            monthDialog.show();
+        }
 
         if (ivCurrent == ivDay) {
             DayDialog dialog = new DayDialog(this);
@@ -91,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mviewPagerYear = findViewById(R.id.vp_year);
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(DayFragment.newInstance("日",""));
-        fragments.add(BlankFragment.newInstance("月",""));
+        fragments.add(MonthFragment.newInstance("月",""));
         fragments.add(VPYearFragment.newInstance("年",""));
 
 
@@ -107,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 changeTab(position);
+
             }
 
             @Override
@@ -170,6 +178,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeTab(v.getId());
         judge(v.getId());
     }
+
+    @Override
+    public void sendmsgtoMainactivity(String temperature) {
+        data=temperature;
+    }
+
+    public class DemoActivity{
+        private String data;
+    }
+
+    public String getData(){
+        return data;
+    }
+
+    public void setYear(String data){
+        this.data=data;
+    }
+
+
 
 
 

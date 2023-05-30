@@ -17,6 +17,60 @@
     <string name="ten">10</string>
     <string name="eleven">11</string>
     <string name="twelve">12</string>
+    <string name="thirteen">13</string>
+    <string name="fourteen">14</string>
+    <string name="fifteen">15</string>
+    <string name="sixteen">16</string>
+    <string name="seventeen">17</string>
+    <string name="eighteen">18</string>
+    <string name="nineteen">19</string>
+    <string name="twenty">20</string>
+    <string name="twentyOne">21</string>
+    <string name="twentyTwo">22</string>
+    <string name="twentyThree">23</string>
+    <string name="twentyFour">24</string>
+    <string name="twentyFive">25</string>
+    <string name="twentySix">26</string>
+    <string name="twentySeven">27</string>
+    <string name="twentyEight">28</string>
+    <string name="twentyNine">29</string>
+    <string name="thirty">30</string>
+    <string name="thirtyOne">31</string>
+
+    <string name="mone">1号</string>
+    <string name="mtwo">2号</string>
+    <string name="mthree">3号</string>
+    <string name="mfour">4号</string>
+    <string name="mfive">5号</string>
+    <string name="msix">6号</string>
+    <string name="mseven">7号</string>
+    <string name="meight">8号</string>
+    <string name="mnine">9号</string>
+    <string name="mten">10号</string>
+    <string name="meleven">11号</string>
+    <string name="mtwelve">12号</string>
+    <string name="mthirteen">13号</string>
+    <string name="mfourteen">14号</string>
+    <string name="mfifteen">15号</string>
+    <string name="msixteen">16号</string>
+    <string name="mseventeen">17号</string>
+    <string name="meighteen">18号</string>
+    <string name="mnineteen">19号</string>
+    <string name="mtwenty">20号</string>
+    <string name="mtwentyOne">21号</string>
+    <string name="mtwentyTwo">22号</string>
+    <string name="mtwentyThree">23号</string>
+    <string name="mtwentyFour">24号</string>
+    <string name="mtwentyFive">25号</string>
+    <string name="mtwentySix">26号</string>
+    <string name="mtwentySeven">27号</string>
+    <string name="mtwentyEight">28号</string>
+    <string name="mtwentyNine">29号</string>
+    <string name="mthirty">30号</string>
+    <string name="mthirtyOne">31号</string>
+
+
+
     <string name="two_zero_two_zero">2020</string>
     <string name="two_zero_two_one">2021</string>
     <string name="two_zero_two_two">2022</string>
@@ -70,5 +124,7 @@
     <string name="list">IT项目综合设计与实践
 王振讲师
 西区综合实验楼 - A305</string>
+
+    <string name="plan_day">计划日期</string>
 
 </resources>
