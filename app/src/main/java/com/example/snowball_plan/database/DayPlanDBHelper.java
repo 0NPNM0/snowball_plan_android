@@ -110,7 +110,7 @@ public class DayPlanDBHelper extends SQLiteOpenHelper {
 //        cv.put("conflictp",dayPlan.conflictp);
 //        cv.put("overtime",dayPlan.overtime);
 
-        return mWDB.insert(TABLE_DAY,null,cv);
+        return mWDB.insert(TABLE_DAY,null,cv) ;
     }
 
     public long deletePlan(int id){

@@ -170,6 +170,8 @@ public class PlanListAdapter extends BaseAdapter{
                     public void onClick(View v) {
                         holder.plan.removeAllViews();
                         deletePlan(day);
+                        Intent mStartActivity = new Intent(mContext, MainActivity.class);
+                        mContext.startActivity(mStartActivity);
                         confirmDialog.dismiss();
                     }
                 });
@@ -210,6 +212,7 @@ public class PlanListAdapter extends BaseAdapter{
             private boolean hasColor = false;
             private ImageView add;
             private Calendar calendar;
+
 
 //            private EditText tv_date;
             @Override
@@ -289,9 +292,11 @@ public class PlanListAdapter extends BaseAdapter{
                         holder.list.setText(day.list);
                         holder.down_bg.setBackgroundColor(day.color);
 
+
                         Intent mStartActivity = new Intent(mContext, MainActivity.class);
                         mContext.startActivity(mStartActivity);
                         editDialog.dismiss();
+
                     }
                 });
 

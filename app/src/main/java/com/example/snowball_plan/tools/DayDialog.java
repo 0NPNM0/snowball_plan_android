@@ -43,7 +43,7 @@ import java.util.GregorianCalendar;
 public class DayDialog extends Dialog{
 
     private Button yes_day;
-    private   Button no_day;
+    private Button no_day;
 
     private Button tab1, tab2, tab3, tab4, tab5,
             tab6, tab7, tab8, tab9, tab10,
