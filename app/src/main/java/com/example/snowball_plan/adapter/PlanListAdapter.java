@@ -3,6 +3,7 @@ package com.example.snowball_plan.adapter;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.snowball_plan.R;
+import com.example.snowball_plan.activity.MainActivity;
 import com.example.snowball_plan.database.DayPlanDBHelper;
 import com.example.snowball_plan.entity.DayPlan;
 import com.example.snowball_plan.tools.ColorSelector;
@@ -287,6 +289,8 @@ public class PlanListAdapter extends BaseAdapter{
                         holder.list.setText(day.list);
                         holder.down_bg.setBackgroundColor(day.color);
 
+                        Intent mStartActivity = new Intent(mContext, MainActivity.class);
+                        mContext.startActivity(mStartActivity);
                         editDialog.dismiss();
                     }
                 });
@@ -300,7 +304,7 @@ public class PlanListAdapter extends BaseAdapter{
 
                 tv_date = editDialog.findViewById(R.id.tv_date);
                 calendar = Calendar.getInstance();
-                tv_date.setText(DateUtil.getDate(calendar));
+                tv_date.setText(holder.date.getText());
 
                 day_task_type = editDialog.findViewById(R.id.day_task_type);
                 day_task_type.setText(holder.type.getText());
