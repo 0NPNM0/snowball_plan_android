@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- 加入网络权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--加入精准闹钟权限-->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 加入精准闹钟权限 -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
@@ -16,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Snowball_plan"
         tools:targetApi="31">
+        <activity
+            android:name=".activity.BtnMonthActivity30"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BtnMonthActivity29"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BtnMonth28"
+            android:exported="false" />
         <activity
             android:name=".activity.DayActivity"
             android:exported="false" />

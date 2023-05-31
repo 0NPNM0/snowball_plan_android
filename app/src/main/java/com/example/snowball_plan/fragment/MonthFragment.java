@@ -1,5 +1,6 @@
 package com.example.snowball_plan.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
@@ -20,6 +22,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -36,10 +39,12 @@ public class MonthFragment extends Fragment {
     private List<String> mTitleListMonth;
     private MonthFragmentPagerAdapter monthFragmentPagerAdapter;
     private ViewPager mViewPagerMonth;
+    private FragmentActivity mContext;
     private TabLayout mTabLayoutMonth;
-    private String year;
+   // private String year;
     private TwentyeightDayFragment fragment2;
     private TewntynineDayFragment fragment2_2;
+    private monthCallBack monthcallback;
 
     public MonthFragment() {
         // Required empty public constructor
@@ -56,16 +61,31 @@ public class MonthFragment extends Fragment {
         return fragment;
     }
 
-
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if(!(context instanceof monthCallBack)){
+            throw new IllegalStateException("又错啦");
+        }
+        monthcallback = (monthCallBack) context;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.mContext=getActivity();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    public interface monthCallBack{
+        void sendmonthtoMainactivity(String month);
+    }
+
+
+
 
     private void onClickBuild(View view) {
 
@@ -77,11 +97,9 @@ public class MonthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_month, container, false);
-        year= String.valueOf(((MainActivity)getActivity()).getData());
-        Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
         // Inflate the layout for this fragment
         return v;
-
 
     }
 
@@ -91,6 +109,8 @@ public class MonthFragment extends Fragment {
 
         mViewPagerMonth = view.findViewById(R.id.vp_day);
         mTabLayoutMonth = view.findViewById(R.id.tab_layout_month);
+        Calendar calendar=Calendar.getInstance();
+        int index=calendar.get(Calendar.MONTH);
 
         FragmentManager fragmentManager= getChildFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();
@@ -100,17 +120,24 @@ public class MonthFragment extends Fragment {
 
         //MyFragmentStateVPAdapter myFragmentStateVPAdapter = new MyFragmentStateVPAdapter(getChildFragmentManager(),fragmentListMonth,mTitleListMonth);
         //mViewPagerMonth.setAdapter(myFragmentStateVPAdapter);
-        monthFragmentPagerAdapter = new MonthFragmentPagerAdapter(getChildFragmentManager(),fragmentListMonth,mTitleListMonth,year);
+        monthFragmentPagerAdapter = new MonthFragmentPagerAdapter(getChildFragmentManager(),fragmentListMonth,mTitleListMonth);
         mViewPagerMonth.setAdapter(monthFragmentPagerAdapter);
 
         mTabLayoutMonth.setupWithViewPager(mViewPagerMonth);
-        mTabLayoutMonth.getTabAt(3).select();
+        mTabLayoutMonth.getTabAt(index).select();
+        mTabLayoutMonth.getSelectedTabPosition();
 
         mTabLayoutMonth.addOnTabSelectedListener(new OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                String month=String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
+
+
+                monthcallback.sendmonthtoMainactivity(month);
+                Toast.makeText(mContext,month,Toast.LENGTH_SHORT).show();
+
                 if (mTabLayoutMonth.getTabAt(1).isSelected()){
-                    //Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
+                 //  Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
 
 //                    if(year.equals(2023)){
 //                        Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
@@ -118,21 +145,21 @@ public class MonthFragment extends Fragment {
 //                    if(year.equals(2022)){
 //                        Toast.makeText(getActivity(),"28282882",Toast.LENGTH_SHORT).show();
 //                    }
-                    switch (year){
-
-                        case "2020":
-                        case "2024":
-
-                            Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
-                            break;
-                        case "2021":
-                        case "2022":
-                        case "2023":
-                        case "2025":
-                        case "2026":
-                            Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
-                            break;
-                    }
+//                    switch (year){
+//
+//                        case "2020":
+//                        case "2024":
+//
+//                            Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
+//                            break;
+//                        case "2021":
+//                        case "2022":
+//                        case "2023":
+//                        case "2025":
+//                        case "2026":
+//                            Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
+//                            break;
+//                    }
 
 
                 }
@@ -162,7 +189,7 @@ public class MonthFragment extends Fragment {
         //双数月份写另一个框架---->evenMonthCellFragment
         //2月份单独一个框架--->FebFragment
         SingalMonthCellFragment fragment1= SingalMonthCellFragment.newInstance("1月", "");
-
+        TwentyeightDayFragment fragment2_1=TwentyeightDayFragment.newInstance("2月","");
         SingalMonthCellFragment fragment3= SingalMonthCellFragment.newInstance("3月", "");
         EvenMonthCellFragment fragment4= EvenMonthCellFragment.newInstance("4月", "");
         SingalMonthCellFragment fragment5= SingalMonthCellFragment.newInstance("5月", "");
@@ -176,21 +203,21 @@ public class MonthFragment extends Fragment {
 
 
         fragmentListMonth.add(fragment1);
-        switch (year){
-            case "2021":
-            case "2022":
-            case "2023":
-            case "2025":
-            case "2026":
-                TwentyeightDayFragment fragment2_1=TwentyeightDayFragment.newInstance("2月","");
+       // switch (year){
+         //   case "2021":
+         //   case "2022":
+         //   case "2023":
+         //   case "2025":
+         //   case "2026":
+                //TwentyeightDayFragment fragment2_1=TwentyeightDayFragment.newInstance("2月","");
                 fragmentListMonth.add(fragment2_1);
-                break;
-            case "2020":
-            case "2024":
-                TewntynineDayFragment fragment2_2=TewntynineDayFragment.newInstance("2月","");
-                fragmentListMonth.add(fragment2_2);
-                break;
-        }
+            //    break;
+          //  case "2020":
+          //  case "2024":
+          //      TewntynineDayFragment fragment2_2=TewntynineDayFragment.newInstance("2月","");
+          //      fragmentListMonth.add(fragment2_2);
+          ///      break;
+       // }
 
 
         fragmentListMonth.add(fragment3);

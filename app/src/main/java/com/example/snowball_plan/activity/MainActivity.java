@@ -23,9 +23,13 @@ import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
 import com.example.snowball_plan.fragment.BlankFragment;
 import com.example.snowball_plan.fragment.DayFragment;
 import com.example.snowball_plan.fragment.MonthFragment;
+import com.example.snowball_plan.fragment.TewntynineDayFragment;
 import com.example.snowball_plan.fragment.VPYearFragment;
 import com.example.snowball_plan.tools.DayDialog;
 import com.example.snowball_plan.tools.MonthDialog;
+import com.example.snowball_plan.tools.ThirtyDialog;
+import com.example.snowball_plan.tools.TwentyEightDialog;
+import com.example.snowball_plan.tools.TwentyNineDialog;
 import com.example.snowball_plan.tools.YearDialog;
 
 import java.util.ArrayList;
@@ -33,7 +37,7 @@ import java.util.List;
 
 import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,VPYearFragment.SharedCallBack{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,VPYearFragment.yearCallBack,MonthFragment.monthCallBack{
 
     //年外fragment参数
     private ViewPager2 mviewPagerYear;
@@ -41,17 +45,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView ivYear,ivMonth,ivDay,ivCurrent;
     private List<Fragment> mFragmentList;
 
-    private String data="2023";
 //    private MyDatabaseHelper myDatabaseHelper_t;
 
     private MyFragmentStateVPAdapter myFragmentStateVPAdapter;
     private EditText year_task_type,year_task_list,year_task_color;
 
     private CheckBox ione,itwo,ithree,ifour,ifive,isix,iseven,ieight,inine,iten,ieleven,itwelve;
+    private ArrayList<Fragment> fragments;
+    private String getyear;
+    private String getmonth;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         //状态栏设置
         setStatusBar();
@@ -83,8 +91,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             yearDialog.show();
         }
         if (ivCurrent == ivMonth) {
-            MonthDialog monthDialog=new MonthDialog(this);
-            monthDialog.show();
+            switch (getmonth){
+                case"1":
+                case"3":
+                case"5":
+                case"7":
+                case"8":
+                case"10":
+                case"12":
+                    MonthDialog monthDialog=new MonthDialog(this);
+                    monthDialog.show();
+                    break;
+                case"4":
+                case"6":
+                case"9":
+                case"11":
+                    ThirtyDialog thirtyDialog=new ThirtyDialog(this);
+                    thirtyDialog.show();
+                    break;
+                case"2":
+                    if(getyear.equals("2020")||getyear.equals("2024")){
+                        TwentyEightDialog twentyEightDialog=new TwentyEightDialog(this);
+                        twentyEightDialog.show();
+                    }else{
+                        TwentyNineDialog twentyNineDialog=new TwentyNineDialog(this);
+                        twentyNineDialog.show();
+                    }
+                    break;
+            }
+//            //MonthDialog monthDialog=new MonthDialog(this);
+//            //monthDialog.show();
         }
 
         if (ivCurrent == ivDay) {
@@ -96,13 +132,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initPager() {
         mviewPagerYear = findViewById(R.id.vp_year);
-        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments = new ArrayList<>();
         fragments.add(DayFragment.newInstance("日",""));
         fragments.add(MonthFragment.newInstance("月",""));
         fragments.add(VPYearFragment.newInstance("年",""));
 
 
-        MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),getLifecycle(),fragments);
+        MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),getLifecycle(), fragments);
         mviewPagerYear.setAdapter(myFragmentPagerAdapter);
         mviewPagerYear.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -114,6 +150,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 changeTab(position);
+
+                if(mviewPagerYear.getCurrentItem()==1){
+                    Toast.makeText(MainActivity.this,getyear,Toast.LENGTH_SHORT).show();
+
+                }
 
             }
 
@@ -179,27 +220,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         judge(v.getId());
     }
 
-    @Override
-    public void sendmsgtoMainactivity(String temperature) {
-        data=temperature;
-    }
-
-    public class DemoActivity{
-        private String data;
-    }
-
-    public String getData(){
-        return data;
-    }
-
-    public void setYear(String data){
-        this.data=data;
-    }
-
-
-
-
-
     //状态栏设置
     //是否使用特殊的标题栏背景颜色，android5.0以上可以设置状态栏背景色，如果不使用则使用透明色值
     public boolean useThemestatusBarColor = false;
@@ -231,4 +251,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    public void sendyeartoMainActivity(String year) {
+        getyear = year;
+    }
+
+    @Override
+    public void sendmonthtoMainactivity(String month) {
+        getmonth = month;
+    }
 }

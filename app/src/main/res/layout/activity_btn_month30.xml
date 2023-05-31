@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="620dp"
+    android:orientation="vertical"
+    style="@style/recy_vertical_style">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scoll_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            tools:context=".activity.BtnMonthActivity"
+            android:background="@color/light_grey"
+            android:descendantFocusability="beforeDescendants"
+            android:fillViewport="true"
+            android:id="@+id/father">
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:text="@string/new_plan"
+                android:textColor="@color/red"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/btn_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plan_day"
+                android:textSize="30sp"
+                android:background="@color/light_grey"
+                android:textColor="@color/black"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="10dp"/>
+
+            <include
+                layout="@layout/item_list_month30"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plan_type"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plan_list"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/color_title"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="10dp"/>
+
+            <include
+                layout="@layout/color_selector"
+                android:layout_width="260dp"
+                android:layout_height="358dp"
+                android:layout_gravity="center"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp">
+
+                <android.widget.Button
+                    android:id="@+id/yes"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/grey"
+                    android:text="@string/yes"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    />
+
+                <android.widget.Button
+                    android:id="@+id/no"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/grey"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/no"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.core.widget.NestedScrollView>

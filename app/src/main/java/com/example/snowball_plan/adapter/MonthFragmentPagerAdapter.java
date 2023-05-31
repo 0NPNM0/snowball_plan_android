@@ -13,16 +13,15 @@ public class MonthFragmentPagerAdapter extends FragmentStatePagerAdapter {
     private final List<Fragment> mFragmentList;
     private final List<String> mTitleList;
     private final FragmentManager mfragmentManager;
-    private final String year;
+   // private final String year;
     private Fragment mfragmentAtPos1;
 
     public MonthFragmentPagerAdapter(@NonNull FragmentManager fm,
                                      List<Fragment> fragmentList,
-                                     List<String> titleList,
-                                     String year) {
+                                     List<String> titleList) {
         super(fm);
         this.mfragmentManager=fm;
-        this.year=year;
+       // this.year=year;
         this.mFragmentList = fragmentList;
         this.mTitleList = titleList;
     }
