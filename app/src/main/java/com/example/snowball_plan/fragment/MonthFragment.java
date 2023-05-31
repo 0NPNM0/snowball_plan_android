@@ -45,6 +45,7 @@ public class MonthFragment extends Fragment {
     private TwentyeightDayFragment fragment2;
     private TewntynineDayFragment fragment2_2;
     private monthCallBack monthcallback;
+    private String month;
 
     public MonthFragment() {
         // Required empty public constructor
@@ -97,6 +98,7 @@ public class MonthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_month, container, false);
+
         //Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
         // Inflate the layout for this fragment
         return v;
@@ -125,16 +127,15 @@ public class MonthFragment extends Fragment {
 
         mTabLayoutMonth.setupWithViewPager(mViewPagerMonth);
         mTabLayoutMonth.getTabAt(index).select();
-        mTabLayoutMonth.getSelectedTabPosition();
+        month = String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
+        monthcallback.sendmonthtoMainactivity(month);
 
         mTabLayoutMonth.addOnTabSelectedListener(new OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                String month=String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
-
-
+                month = String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
                 monthcallback.sendmonthtoMainactivity(month);
-                Toast.makeText(mContext,month,Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, month,Toast.LENGTH_SHORT).show();
 
                 if (mTabLayoutMonth.getTabAt(1).isSelected()){
                  //  Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
