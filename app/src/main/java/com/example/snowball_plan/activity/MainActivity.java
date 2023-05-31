@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 changeTab(position);
 
                 if(mviewPagerYear.getCurrentItem()==1){
-                    Toast.makeText(MainActivity.this,getyear,Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this,getyear,Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -255,6 +255,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void sendyeartoMainActivity(String year) {
         getyear = year;
     }
+
+
 
     @Override
     public void sendmonthtoMainactivity(String month) {

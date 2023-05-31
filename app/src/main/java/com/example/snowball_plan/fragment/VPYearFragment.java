@@ -89,6 +89,8 @@ public class VPYearFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        desc=String.valueOf(2023);
+        yearcallback.sendyeartoMainActivity(desc);
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_v_p_year, container, false);
@@ -110,6 +112,8 @@ public class VPYearFragment extends Fragment {
 
         mtablayoutYear.setupWithViewPager(mViewPagerYear);
         mtablayoutYear.getTabAt(3).select();
+
+
         mtablayoutYear.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
 
 
@@ -135,6 +139,7 @@ public class VPYearFragment extends Fragment {
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
