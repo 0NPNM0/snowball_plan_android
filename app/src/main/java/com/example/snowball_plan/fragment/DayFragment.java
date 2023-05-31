@@ -22,7 +22,6 @@ import com.example.snowball_plan.R;
 import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
 import com.example.snowball_plan.database.DayPlanDBHelper;
 import com.example.snowball_plan.tools.DateUtil;
-import com.example.snowball_plan.tools.MatchDate;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -1435,10 +1434,7 @@ public class DayFragment extends Fragment {
 
 
         tl.setupWithViewPager(vp);
-//        i = 28;
-//        MatchDate matchDate = new MatchDate();
-//        String d = DateUtil.getDate(calendarNow);
-//        i = matchDate.judge(d);
+
 
         String d = DateUtil.getDate(calendarNow);
 
