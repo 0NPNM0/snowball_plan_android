@@ -13,7 +13,7 @@
     <android.widget.Button
         android:id="@+id/btn_one"
         android:text="@string/one"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -23,7 +23,7 @@
     <android.widget.Button
         android:id="@+id/btn_two"
         android:text="@string/two"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -32,7 +32,7 @@
     <android.widget.Button
         android:id="@+id/btn_three"
         android:text="@string/three"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -41,7 +41,7 @@
     <android.widget.Button
         android:id="@+id/btn_four"
         android:text="@string/four"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -50,7 +50,7 @@
     <android.widget.Button
         android:id="@+id/btn_five"
         android:text="@string/five"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -59,7 +59,7 @@
     <android.widget.Button
         android:id="@+id/btn_six"
         android:text="@string/six"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -68,7 +68,7 @@
     <android.widget.Button
         android:id="@+id/btn_seven"
         android:text="@string/seven"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -78,7 +78,7 @@
     <android.widget.Button
         android:id="@+id/btn_eight"
         android:text="@string/eight"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -88,7 +88,7 @@
     <android.widget.Button
         android:id="@+id/btn_nine"
         android:text="@string/nine"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -97,7 +97,7 @@
     <android.widget.Button
         android:id="@+id/btn_ten"
         android:text="@string/ten"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -106,7 +106,7 @@
     <android.widget.Button
         android:id="@+id/btn_eleven"
         android:text="@string/eleven"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -115,7 +115,7 @@
     <android.widget.Button
         android:id="@+id/btn_twelve"
         android:text="@string/twelve"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -124,7 +124,7 @@
     <android.widget.Button
         android:id="@+id/btn_thirteen"
         android:text="@string/thirteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -133,7 +133,7 @@
     <android.widget.Button
         android:id="@+id/btn_fourteen"
         android:text="@string/fourteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -142,7 +142,7 @@
     <android.widget.Button
         android:id="@+id/btn_fifteen"
         android:text="@string/fifteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -152,7 +152,7 @@
     <android.widget.Button
         android:id="@+id/btn_sixteen"
         android:text="@string/sixteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -161,7 +161,7 @@
     <android.widget.Button
         android:id="@+id/btn_seventeen"
         android:text="@string/seventeen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -170,7 +170,7 @@
     <android.widget.Button
         android:id="@+id/btn_eighteen"
         android:text="@string/eighteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -179,7 +179,7 @@
     <android.widget.Button
         android:id="@+id/btn_nineteen"
         android:text="@string/nineteen"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -188,7 +188,7 @@
     <android.widget.Button
         android:id="@+id/btn_twenty"
         android:text="@string/twenty"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -197,7 +197,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentyOne"
         android:text="@string/twentyOne"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -206,16 +206,17 @@
     <android.widget.Button
         android:id="@+id/btn_twentyTwo"
         android:text="@string/twentyTwo"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
         android:background="@color/white"
         style="?android:attr/borderlessButtonStyle"/>
+
     <android.widget.Button
         android:id="@+id/btn_twentyThree"
         android:text="@string/twentyThree"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -224,7 +225,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentyFour"
         android:text="@string/twentyFour"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -233,7 +234,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentyFive"
         android:text="@string/twentyFive"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -242,7 +243,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentySix"
         android:text="@string/twentySix"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -251,7 +252,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentySeven"
         android:text="@string/twentySeven"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -260,7 +261,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentyEight"
         android:text="@string/twentyEight"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"
@@ -269,7 +270,7 @@
     <android.widget.Button
         android:id="@+id/btn_twentyNine"
         android:text="@string/twentyNine"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
         android:textSize="18sp"

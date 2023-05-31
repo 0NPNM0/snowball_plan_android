@@ -258,6 +258,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void sendmonthtoMainactivity(String month) {
-        getmonth = month;
+        getmonth=month;
     }
+
+
 }

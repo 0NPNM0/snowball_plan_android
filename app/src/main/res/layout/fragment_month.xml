@@ -11,11 +11,11 @@
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout_month"
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         app:tabMaxWidth="70dp"
         app:tabMinWidth="50dp"
-        app:tabPaddingStart="5dp"
-        app:tabPaddingEnd="5dp"
+        app:tabPaddingStart="10dp"
+        app:tabPaddingEnd="10dp"
 
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

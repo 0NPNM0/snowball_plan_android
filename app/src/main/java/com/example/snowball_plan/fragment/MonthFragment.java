@@ -70,7 +70,7 @@ public class MonthFragment extends Fragment {
         monthcallback = (monthCallBack) context;
     }
 
-    @Override
+//    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.mContext=getActivity();
