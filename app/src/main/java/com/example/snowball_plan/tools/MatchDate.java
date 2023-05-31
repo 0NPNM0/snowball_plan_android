@@ -14,12 +14,15 @@ public class MatchDate {
 //       calendar.set(Calendar.DAY_OF_MONTH,day);
 //   }
 
-   String date = DateUtil.getDate(calendar);
    public int judge(String d){
+
+       calendar.set(Calendar.YEAR,2023);
+       calendar.set(Calendar.MONTH,4);
+       calendar.set(Calendar.DAY_OF_MONTH,29);
+       String date = DateUtil.getDate(calendar);
 
        if(!date.equals(d)){
           ++i;
-          date = d;
        }
        return i;
    }
