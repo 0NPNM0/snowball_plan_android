@@ -10,11 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.snowball_plan.R;
 import com.example.snowball_plan.adapter.MyFragmentStateVPAdapter;
@@ -85,8 +87,7 @@ public class DayFragment extends Fragment {
 
     private final ArrayList<TabLayout.Tab> tabs = new ArrayList<>();
 
-    public int i;
-
+    public static int i ;
 
     private DayPlanDBHelper dbHelper;
 
@@ -1435,9 +1436,684 @@ public class DayFragment extends Fragment {
 
         tl.setupWithViewPager(vp);
 //        i = 28;
-        MatchDate matchDate = new MatchDate();
+//        MatchDate matchDate = new MatchDate();
+//        String d = DateUtil.getDate(calendarNow);
+//        i = matchDate.judge(d);
+
         String d = DateUtil.getDate(calendarNow);
-        i = matchDate.judge(d);
+
+        switch (d){
+            case "2023-05-29":
+                i = 28;
+                break;
+            case "2023-05-30":
+                i = 29;
+                break;
+            case "2023-05-31":
+                i = 30;
+                break;
+
+
+            case"2023-06-01":
+                i = 31;
+                break;
+            case"2023-06-02":
+                i = 32;
+                break;
+            case"2023-06-03":
+                i = 33;
+                break;
+            case"2023-06-04":
+                i = 34;
+                break;
+            case"2023-06-05":
+                i = 35;
+                break;
+            case"2023-06-06":
+                i = 36;
+                break;
+            case"2023-06-07":
+                i = 37;
+                break;
+            case"2023-06-08":
+                i = 38;
+                break;
+            case"2023-06-09":
+                i = 39;
+                break;
+            case"2023-06-10":
+                i = 40;
+                break;
+            case"2023-06-11":
+                i = 41;
+                break;
+            case"2023-06-12":
+                i = 42;
+                break;
+            case"2023-06-13":
+                i = 43;
+                break;
+            case"2023-06-14":
+                i = 44;
+                break;
+            case"2023-06-15":
+                i = 45;
+                break;
+            case"2023-06-16":
+                i = 46;
+                break;
+            case"2023-06-17":
+                i = 47;
+                break;
+            case"2023-06-18":
+                i = 48;
+                break;
+            case"2023-06-19":
+                i = 49;
+                break;
+            case"2023-06-20":
+                i = 50;
+                break;
+            case"2023-06-21":
+                i = 51;
+                break;
+            case"2023-06-22":
+                i = 52;
+                break;
+            case"2023-06-23":
+                i = 53;
+                break;
+            case"2023-06-24":
+                i = 54;
+                break;
+            case"2023-06-25":
+                i = 55;
+                break;
+            case"2023-06-26":
+                i = 56;
+                break;
+            case"2023-06-27":
+                i = 57;
+                break;
+            case"2023-06-28":
+                i = 58;
+                break;
+            case"2023-06-29":
+                i = 59;
+                break;
+            case"2023-06-30":
+                i = 60;
+                break;
+
+
+
+            case"2023-07-01":
+                i = 61;
+                break;
+            case"2023-07-02":
+                i = 62;
+                break;
+            case"2023-07-03":
+                i = 63;
+                break;
+            case"2023-07-04":
+                i = 64;
+                break;
+            case"2023-07-05":
+                i = 65;
+                break;
+            case"2023-07-06":
+                i = 66;
+                break;
+            case"2023-07-07":
+                i = 67;
+                break;
+            case"2023-07-08":
+                i = 68;
+                break;
+            case"2023-07-09":
+                i = 69;
+                break;
+            case"2023-07-10":
+                i = 70;
+                break;
+            case"2023-07-11":
+                i = 71;
+                break;
+            case"2023-07-12":
+                i = 72;
+                break;
+            case"2023-07-13":
+                i = 73;
+                break;
+            case"2023-07-14":
+                i = 74;
+                break;
+            case"2023-07-15":
+                i = 75;
+                break;
+            case"2023-07-16":
+                i = 76;
+                break;
+            case"2023-07-17":
+                i = 77;
+                break;
+            case"2023-07-18":
+                i = 78;
+                break;
+            case"2023-07-19":
+                i = 79;
+                break;
+            case"2023-07-20":
+                i = 80;
+                break;
+            case"2023-07-21":
+                i = 81;
+                break;
+            case"2023-07-22":
+                i = 82;
+                break;
+            case"2023-07-23":
+                i = 83;
+                break;
+            case"2023-07-24":
+                i = 84;
+                break;
+            case"2023-07-25":
+                i = 85;
+                break;
+            case"2023-07-26":
+                i = 86;
+                break;
+            case"2023-07-27":
+                i = 87;
+                break;
+            case"2023-07-28":
+                i = 88;
+                break;
+            case"2023-07-29":
+                i = 89;
+                break;
+            case"2023-07-30":
+                i = 90;
+                break;
+            case"2023-07-31":
+                i = 91;
+                break;
+
+
+            case"2023-08-01":
+                i = 92;
+                break;
+            case"2023-08-02":
+                i = 93;
+                break;
+            case"2023-08-03":
+                i = 94;
+                break;
+            case"2023-08-04":
+                i = 95;
+                break;
+            case"2023-08-05":
+                i = 96;
+                break;
+            case"2023-08-06":
+                i = 97;
+                break;
+            case"2023-08-07":
+                i = 98;
+                break;
+            case"2023-08-08":
+                i = 99;
+                break;
+            case"2023-08-09":
+                i = 100;
+                break;
+            case"2023-08-10":
+                i = 101;
+                break;
+            case"2023-08-11":
+                i = 102;
+                break;
+            case"2023-08-12":
+                i = 103;
+                break;
+            case"2023-08-13":
+                i = 104;
+                break;
+            case"2023-08-14":
+                i = 105;
+                break;
+            case"2023-08-15":
+                i = 106;
+                break;
+            case"2023-08-16":
+                i = 107;
+                break;
+            case"2023-08-17":
+                i = 108;
+                break;
+            case"2023-08-18":
+                i = 109;
+                break;
+            case"2023-08-19":
+                i = 110;
+                break;
+            case"2023-08-20":
+                i = 111;
+                break;
+            case"2023-08-21":
+                i = 112;
+                break;
+            case"2023-08-22":
+                i = 113;
+                break;
+            case"2023-08-23":
+                i = 114;
+                break;
+            case"2023-08-24":
+                i = 115;
+                break;
+            case"2023-08-25":
+                i = 116;
+                break;
+            case"2023-08-26":
+                i = 117;
+                break;
+            case"2023-08-27":
+                i = 118;
+                break;
+            case"2023-08-28":
+                i = 119;
+                break;
+            case"2023-08-29":
+                i = 120;
+                break;
+            case"2023-08-30":
+                i = 121;
+                break;
+            case"2023-08-31":
+                i = 122;
+                break;
+
+
+            case"2023-09-01":
+                i = 123;
+                break;
+            case"2023-09-02":
+                i = 124;
+                break;
+            case"2023-09-03":
+                i = 125;
+                break;
+            case"2023-09-04":
+                i = 126;
+                break;
+            case"2023-09-05":
+                i = 127;
+                break;
+            case"2023-09-06":
+                i = 128;
+                break;
+            case"2023-09-07":
+                i = 129;
+                break;
+            case"2023-09-08":
+                i = 130;
+                break;
+            case"2023-09-09":
+                i = 131;
+                break;
+            case"2023-09-10":
+                i = 132;
+                break;
+            case"2023-09-11":
+                i = 133;
+                break;
+            case"2023-09-12":
+                i = 134;
+                break;
+            case"2023-09-13":
+                i = 135;
+                break;
+            case"2023-09-14":
+                i = 136;
+                break;
+            case"2023-09-15":
+                i = 137;
+                break;
+            case"2023-09-16":
+                i = 138;
+                break;
+            case"2023-09-17":
+                i = 139;
+                break;
+            case"2023-09-18":
+                i = 140;
+                break;
+            case"2023-09-19":
+                i = 141;
+                break;
+            case"2023-09-20":
+                i = 142;
+                break;
+            case"2023-09-21":
+                i = 143;
+                break;
+            case"2023-09-22":
+                i = 144;
+                break;
+            case"2023-09-23":
+                i = 145;
+                break;
+            case"2023-09-24":
+                i = 146;
+                break;
+            case"2023-09-25":
+                i = 147;
+                break;
+            case"2023-09-26":
+                i = 148;
+                break;
+            case"2023-09-27":
+                i = 149;
+                break;
+            case"2023-09-28":
+                i = 150;
+                break;
+            case"2023-09-29":
+                i = 151;
+                break;
+            case"2023-09-30":
+                i = 152;
+                break;
+
+
+
+            case"2023-10-01":
+                i = 153;
+                break;
+            case"2023-10-02":
+                i = 154;
+                break;
+            case"2023-10-03":
+                i = 155;
+                break;
+            case"2023-10-04":
+                i = 156;
+                break;
+            case"2023-10-05":
+                i = 157;
+                break;
+            case"2023-10-06":
+                i = 158;
+                break;
+            case"2023-10-07":
+                i = 159;
+                break;
+            case"2023-10-08":
+                i = 160;
+                break;
+            case"2023-10-09":
+                i = 161;
+                break;
+            case"2023-10-10":
+                i = 162;
+                break;
+            case"2023-10-11":
+                i = 163;
+                break;
+            case"2023-10-12":
+                i = 164;
+                break;
+            case"2023-10-13":
+                i = 165;
+                break;
+            case"2023-10-14":
+                i = 166;
+                break;
+            case"2023-10-15":
+                i = 167;
+                break;
+            case"2023-10-16":
+                i = 168;
+                break;
+            case"2023-10-17":
+                i = 169;
+                break;
+            case"2023-10-18":
+                i = 170;
+                break;
+            case"2023-10-19":
+                i = 171;
+                break;
+            case"2023-10-20":
+                i = 172;
+                break;
+            case"2023-10-21":
+                i = 173;
+                break;
+            case"2023-10-22":
+                i = 174;
+                break;
+            case"2023-10-23":
+                i = 175;
+                break;
+            case"2023-10-24":
+                i = 176;
+                break;
+            case"2023-10-25":
+                i = 177;
+                break;
+            case"2023-10-26":
+                i = 178;
+                break;
+            case"2023-10-27":
+                i = 179;
+                break;
+            case"2023-10-28":
+                i = 180;
+                break;
+            case"2023-10-29":
+                i = 181;
+                break;
+            case"2023-10-30":
+                i = 182;
+                break;
+            case"2023-10-31":
+                i = 183;
+                break;
+
+
+
+            case"2023-11-01":
+                i = 184;
+                break;
+            case"2023-11-02":
+                i = 185;
+                break;
+            case"2023-11-03":
+                i = 186;
+                break;
+            case"2023-11-04":
+                i = 187;
+                break;
+            case"2023-11-05":
+                i = 188;
+                break;
+            case"2023-11-06":
+                i = 189;
+                break;
+            case"2023-11-07":
+                i = 190;
+                break;
+            case"2023-11-08":
+                i = 191;
+                break;
+            case"2023-11-09":
+                i = 192;
+                break;
+            case"2023-11-10":
+                i = 193;
+                break;
+            case"2023-11-11":
+                i = 194;
+                break;
+            case"2023-11-12":
+                i = 195;
+                break;
+            case"2023-11-13":
+                i = 196;
+                break;
+            case"2023-11-14":
+                i = 197;
+                break;
+            case"2023-11-15":
+                i = 198;
+                break;
+            case"2023-11-16":
+                i = 199;
+                break;
+            case"2023-11-17":
+                i = 200;
+                break;
+            case"2023-11-18":
+                i = 201;
+                break;
+            case"2023-11-19":
+                i = 202;
+                break;
+            case"2023-11-20":
+                i = 203;
+                break;
+            case"2023-11-21":
+                i = 204;
+                break;
+            case"2023-11-22":
+                i = 205;
+                break;
+            case"2023-11-23":
+                i = 206;
+                break;
+            case"2023-11-24":
+                i = 207;
+                break;
+            case"2023-11-25":
+                i = 208;
+                break;
+            case"2023-11-26":
+                i = 209;
+                break;
+            case"2023-11-27":
+                i = 210;
+                break;
+            case"2023-11-28":
+                i = 211;
+                break;
+            case"2023-11-29":
+                i = 212;
+                break;
+            case"2023-11-30":
+                i = 213;
+                break;
+
+
+            case"2023-12-01":
+                i = 214;
+                break;
+            case"2023-12-02":
+                i = 215;
+                break;
+            case"2023-12-03":
+                i = 216;
+                break;
+            case"2023-12-04":
+                i = 217;
+                break;
+            case"2023-12-05":
+                i = 218;
+                break;
+            case"2023-12-06":
+                i = 219;
+                break;
+            case"2023-12-07":
+                i = 220;
+                break;
+            case"2023-12-08":
+                i = 221;
+                break;
+            case"2023-12-09":
+                i = 222;
+                break;
+            case"2023-12-10":
+                i = 223;
+                break;
+            case"2023-12-11":
+                i = 224;
+                break;
+            case"2023-12-12":
+                i = 225;
+                break;
+            case"2023-12-13":
+                i = 226;
+                break;
+            case"2023-12-14":
+                i = 227;
+                break;
+            case"2023-12-15":
+                i = 228;
+                break;
+            case"2023-12-16":
+                i = 229;
+                break;
+            case"2023-12-17":
+                i = 230;
+                break;
+            case"2023-12-18":
+                i = 231;
+                break;
+            case"2023-12-19":
+                i = 232;
+                break;
+            case"2023-12-20":
+                i = 233;
+                break;
+            case"2023-12-21":
+                i = 234;
+                break;
+            case"2023-12-22":
+                i = 235;
+                break;
+            case"2023-12-23":
+                i = 236;
+                break;
+            case"2023-12-24":
+                i = 237;
+                break;
+            case"2023-12-25":
+                i = 238;
+                break;
+            case"2023-12-26":
+                i = 239;
+                break;
+            case"2023-12-27":
+                i = 240;
+                break;
+            case"2023-12-28":
+                i = 241;
+                break;
+            case"2023-12-29":
+                i = 242;
+                break;
+            case"2023-12-30":
+                i = 243;
+                break;
+            case"2023-12-31":
+                i = 244;
+                break;
+
+
+        }
         tl.getTabAt(i).select();
 
     }
