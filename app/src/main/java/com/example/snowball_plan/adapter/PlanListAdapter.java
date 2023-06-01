@@ -170,8 +170,8 @@ public class PlanListAdapter extends BaseAdapter{
                     public void onClick(View v) {
                         holder.plan.removeAllViews();
                         deletePlan(day);
-                        Intent mStartActivity = new Intent(mContext, MainActivity.class);
-                        mContext.startActivity(mStartActivity);
+//                        Intent mStartActivity = new Intent(mContext, MainActivity.class);
+//                        mContext.startActivity(mStartActivity);
                         confirmDialog.dismiss();
                     }
                 });
@@ -272,6 +272,7 @@ public class PlanListAdapter extends BaseAdapter{
 //                        holder.list.setText(day_task_list.getText());
 //                        holder.down_bg.setBackgroundColor(colorSelector1.Selector(isCurrent.getId()));
 
+                        String dd = day.date;
 
                         DayPlan day_new = mDayPlanList.get(position);
                         day_new.date = tv_date.getText().toString();
@@ -293,8 +294,11 @@ public class PlanListAdapter extends BaseAdapter{
                         holder.down_bg.setBackgroundColor(day.color);
 
 
-                        Intent mStartActivity = new Intent(mContext, MainActivity.class);
-                        mContext.startActivity(mStartActivity);
+                        if(dd!=day.date){
+                            Intent mStartActivity = new Intent(mContext, MainActivity.class);
+                            mContext.startActivity(mStartActivity);
+                        }
+
                         editDialog.dismiss();
 
                     }
