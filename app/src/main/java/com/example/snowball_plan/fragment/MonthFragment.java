@@ -1,6 +1,7 @@
 package com.example.snowball_plan.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +49,7 @@ public class MonthFragment extends Fragment{
     private String month;
     private String getyear;
     private boolean isFirstLoading;
+    private int index;
 
 
     public MonthFragment() {
@@ -68,7 +70,7 @@ public class MonthFragment extends Fragment{
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        //getyear=((MainActivity)context).getData();
+        getyear=((MainActivity)context).getData();
         if(!(context instanceof monthCallBack)){
             throw new IllegalStateException("又错啦");
         }
@@ -84,11 +86,46 @@ public class MonthFragment extends Fragment{
         }
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(!isFirstLoading){
+            getyear=((MainActivity)getActivity()).getData();
+            switch (getyear){
+
+                case "2020":
+                case "2024":
+                    fragmentListMonth.set(1,fragment2_2);
+
+                    // Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
+                    break;
+                case "2021":
+                case "2022":
+                case "2023":
+                case "2025":
+                case "2026":
+                    fragmentListMonth.set(1,fragment2);
+                    // Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
+                    break;
+            }
+        }
+        isFirstLoading=false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mTabLayoutMonth.getTabAt(index).select();
+    }
     //获得年份
 
     public interface monthCallBack{
         void sendmonthtoMainactivity(String month);
     }
+
+
 
 
 
@@ -103,6 +140,7 @@ public class MonthFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_month, container, false);
+        isFirstLoading= true;
 
         //Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
         // Inflate the layout for this fragment
@@ -114,10 +152,11 @@ public class MonthFragment extends Fragment{
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         mViewPagerMonth = view.findViewById(R.id.vp_day);
         mTabLayoutMonth = view.findViewById(R.id.tab_layout_month);
         Calendar calendar=Calendar.getInstance();
-        int index=calendar.get(Calendar.MONTH);
+        index = calendar.get(Calendar.MONTH);
 
         FragmentManager fragmentManager= getChildFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();
@@ -140,29 +179,9 @@ public class MonthFragment extends Fragment{
                 month = String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
                 monthcallback.sendmonthtoMainactivity(month);
                // Toast.makeText(mContext, month,Toast.LENGTH_SHORT).show();
-                getyear=((MainActivity)getActivity()).getData();
                 if (mTabLayoutMonth.getTabAt(1).isSelected()){
 
-
                    //Toast.makeText(getActivity(),getyear,Toast.LENGTH_SHORT).show();
-
-                    switch (getyear){
-
-                        case "2020":
-                        case "2024":
-                            fragmentListMonth.set(1,fragment2_2);
-
-                           // Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
-                            break;
-                        case "2021":
-                        case "2022":
-                        case "2023":
-                        case "2025":
-                        case "2026":
-                            fragmentListMonth.set(1,fragment2);
-                           // Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
-                            break;
-                    }
 
 
                 }
