@@ -2,6 +2,8 @@ package com.example.snowball_plan.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.graphics.Color;
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private CheckBox ione,itwo,ithree,ifour,ifive,isix,iseven,ieight,inine,iten,ieleven,itwelve;
     private ArrayList<Fragment> fragments;
-    private String getyear;
+    private String getyear="2023";
     private String getmonth;
 
 
@@ -81,7 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //新建按钮
         findViewById(R.id.build).setOnClickListener(this::onClickBuild);
 
+
     }
+
 
     //新建任务
     private void onClickBuild(View view) {
@@ -111,11 +115,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case"2":
                     if(getyear.equals("2020")||getyear.equals("2024")){
-                        TwentyEightDialog twentyEightDialog=new TwentyEightDialog(this);
-                        twentyEightDialog.show();
-                    }else{
                         TwentyNineDialog twentyNineDialog=new TwentyNineDialog(this);
                         twentyNineDialog.show();
+                    }else{
+                        
+                        TwentyEightDialog twentyEightDialog=new TwentyEightDialog(this);
+                        twentyEightDialog.show();
                     }
                     break;
             }
@@ -138,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragments.add(VPYearFragment.newInstance("年",""));
 
 
+
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),getLifecycle(), fragments);
         mviewPagerYear.setAdapter(myFragmentPagerAdapter);
         mviewPagerYear.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -152,8 +158,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 changeTab(position);
 
                 if(mviewPagerYear.getCurrentItem()==1){
-                    //Toast.makeText(MainActivity.this,getyear,Toast.LENGTH_SHORT).show();
 
+                  //  Toast.makeText(MainActivity.this,getyear,Toast.LENGTH_SHORT).show();
+
+                   // Toast.makeText(MainActivity.this,getData(),Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -220,6 +228,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         judge(v.getId());
     }
 
+
+
     //状态栏设置
     //是否使用特殊的标题栏背景颜色，android5.0以上可以设置状态栏背景色，如果不使用则使用透明色值
     public boolean useThemestatusBarColor = false;
@@ -245,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "低于4.4的android系统版本不存在沉浸式状态栏", Toast.LENGTH_SHORT).show();
         }
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && useStatusBarColor) {//android6.0以后可以对状态栏文字颜色和图标进行修改
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
@@ -253,8 +264,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void sendyeartoMainActivity(String year) {
-        getyear = year;
+              getyear = year;
     }
+
+
 
 
 
@@ -264,4 +277,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public String getData() {
+        return getyear;
+    }
 }

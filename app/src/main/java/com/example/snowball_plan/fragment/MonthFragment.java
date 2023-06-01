@@ -26,7 +26,7 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class MonthFragment extends Fragment {
+public class MonthFragment extends Fragment{
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -46,6 +46,9 @@ public class MonthFragment extends Fragment {
     private TewntynineDayFragment fragment2_2;
     private monthCallBack monthcallback;
     private String month;
+    private String getyear;
+    private boolean isFirstLoading;
+
 
     public MonthFragment() {
         // Required empty public constructor
@@ -65,6 +68,7 @@ public class MonthFragment extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+        //getyear=((MainActivity)context).getData();
         if(!(context instanceof monthCallBack)){
             throw new IllegalStateException("又错啦");
         }
@@ -74,12 +78,13 @@ public class MonthFragment extends Fragment {
 //    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.mContext=getActivity();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    //获得年份
 
     public interface monthCallBack{
         void sendmonthtoMainactivity(String month);
@@ -117,7 +122,6 @@ public class MonthFragment extends Fragment {
         FragmentManager fragmentManager= getChildFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();
 
-        
         initMonthFragmentData();
 
         //MyFragmentStateVPAdapter myFragmentStateVPAdapter = new MyFragmentStateVPAdapter(getChildFragmentManager(),fragmentListMonth,mTitleListMonth);
@@ -135,35 +139,34 @@ public class MonthFragment extends Fragment {
             public void onTabSelected(TabLayout.Tab tab) {
                 month = String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
                 monthcallback.sendmonthtoMainactivity(month);
-                Toast.makeText(mContext, month,Toast.LENGTH_SHORT).show();
-
+               // Toast.makeText(mContext, month,Toast.LENGTH_SHORT).show();
+                getyear=((MainActivity)getActivity()).getData();
                 if (mTabLayoutMonth.getTabAt(1).isSelected()){
-                 //  Toast.makeText(getActivity(),year,Toast.LENGTH_SHORT).show();
 
-//                    if(year.equals(2023)){
-//                        Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
-//                    }
-//                    if(year.equals(2022)){
-//                        Toast.makeText(getActivity(),"28282882",Toast.LENGTH_SHORT).show();
-//                    }
-//                    switch (year){
-//
-//                        case "2020":
-//                        case "2024":
-//
-//                            Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
-//                            break;
-//                        case "2021":
-//                        case "2022":
-//                        case "2023":
-//                        case "2025":
-//                        case "2026":
-//                            Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
-//                            break;
-//                    }
+
+                   //Toast.makeText(getActivity(),getyear,Toast.LENGTH_SHORT).show();
+
+                    switch (getyear){
+
+                        case "2020":
+                        case "2024":
+                            fragmentListMonth.set(1,fragment2_2);
+
+                           // Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
+                            break;
+                        case "2021":
+                        case "2022":
+                        case "2023":
+                        case "2025":
+                        case "2026":
+                            fragmentListMonth.set(1,fragment2);
+                           // Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
+                            break;
+                    }
 
 
                 }
+
 
             }
 
@@ -178,7 +181,6 @@ public class MonthFragment extends Fragment {
             }
         });
 
-
     }
 
 
@@ -186,11 +188,12 @@ public class MonthFragment extends Fragment {
 
         fragmentListMonth =new ArrayList<>();
 
+
         //单数月份要写一个框架--->signalMonthCellFragment
         //双数月份写另一个框架---->evenMonthCellFragment
         //2月份单独一个框架--->FebFragment
         SingalMonthCellFragment fragment1= SingalMonthCellFragment.newInstance("1月", "");
-        TwentyeightDayFragment fragment2_1=TwentyeightDayFragment.newInstance("2月","");
+        fragment2=TwentyeightDayFragment.newInstance("2月","");
         SingalMonthCellFragment fragment3= SingalMonthCellFragment.newInstance("3月", "");
         EvenMonthCellFragment fragment4= EvenMonthCellFragment.newInstance("4月", "");
         SingalMonthCellFragment fragment5= SingalMonthCellFragment.newInstance("5月", "");
@@ -201,26 +204,10 @@ public class MonthFragment extends Fragment {
         SingalMonthCellFragment fragment10= SingalMonthCellFragment.newInstance("10月", "");
         EvenMonthCellFragment fragment11= EvenMonthCellFragment.newInstance("11月", "");
         SingalMonthCellFragment fragment12= SingalMonthCellFragment.newInstance("12月", "");
-
+        fragment2_2 = TewntynineDayFragment.newInstance("2月","");
 
         fragmentListMonth.add(fragment1);
-       // switch (year){
-         //   case "2021":
-         //   case "2022":
-         //   case "2023":
-         //   case "2025":
-         //   case "2026":
-                //TwentyeightDayFragment fragment2_1=TwentyeightDayFragment.newInstance("2月","");
-                fragmentListMonth.add(fragment2_1);
-            //    break;
-          //  case "2020":
-          //  case "2024":
-          //      TewntynineDayFragment fragment2_2=TewntynineDayFragment.newInstance("2月","");
-          //      fragmentListMonth.add(fragment2_2);
-          ///      break;
-       // }
-
-
+        fragmentListMonth.add(fragment2);
         fragmentListMonth.add(fragment3);
         fragmentListMonth.add(fragment4);
         fragmentListMonth.add(fragment5);

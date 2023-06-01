@@ -121,7 +121,7 @@ public class VPYearFragment extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 desc = String.valueOf(tab.getPosition()+2020);
-                Toast.makeText(mContext, desc,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(mContext, desc,Toast.LENGTH_SHORT).show();
                 //Bundle bundle=new Bundle();
                 //bundle.putString("year", String.valueOf(tab.getPosition()+2020));
                 //Intent intent=new Intent();
