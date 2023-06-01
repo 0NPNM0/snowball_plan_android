@@ -90,9 +90,9 @@ public class MonthFragment extends Fragment{
     @Override
     public void onResume() {
         super.onResume();
-
+        getyear=((MainActivity)getActivity()).getData();
         if(!isFirstLoading){
-            getyear=((MainActivity)getActivity()).getData();
+           // getyear=((MainActivity)getActivity()).getData();
             switch (getyear){
 
                 case "2020":
