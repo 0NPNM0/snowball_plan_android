@@ -50,6 +50,17 @@ public class MonthFragment extends Fragment{
     private String getyear;
     private boolean isFirstLoading;
     private int index;
+    private SingalMonthCellFragment fragment1;
+    private SingalMonthCellFragment fragment3;
+    private EvenMonthCellFragment fragment4;
+    private SingalMonthCellFragment fragment5;
+    private EvenMonthCellFragment fragment6;
+    private SingalMonthCellFragment fragment7;
+    private SingalMonthCellFragment fragment8;
+    private EvenMonthCellFragment fragment9;
+    private SingalMonthCellFragment fragment10;
+    private EvenMonthCellFragment fragment11;
+    private SingalMonthCellFragment fragment12;
 
 
     public MonthFragment() {
@@ -86,19 +97,25 @@ public class MonthFragment extends Fragment{
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
 
     @Override
     public void onResume() {
         super.onResume();
+
         getyear=((MainActivity)getActivity()).getData();
         if(!isFirstLoading){
            // getyear=((MainActivity)getActivity()).getData();
+
             switch (getyear){
 
                 case "2020":
                 case "2024":
                     fragmentListMonth.set(1,fragment2_2);
-
+                    mTabLayoutMonth.getTabAt(index).select();
                     // Toast.makeText(getActivity(),"2929292",Toast.LENGTH_SHORT).show();
                     break;
                 case "2021":
@@ -107,6 +124,7 @@ public class MonthFragment extends Fragment{
                 case "2025":
                 case "2026":
                     fragmentListMonth.set(1,fragment2);
+                    mTabLayoutMonth.getTabAt(index).select();
                     // Toast.makeText(getActivity(),"28282828",Toast.LENGTH_SHORT).show();
                     break;
             }
@@ -117,18 +135,14 @@ public class MonthFragment extends Fragment{
     @Override
     public void onPause() {
         super.onPause();
-        mTabLayoutMonth.getTabAt(index).select();
+
     }
+
     //获得年份
 
     public interface monthCallBack{
         void sendmonthtoMainactivity(String month);
     }
-
-
-
-
-
 
     private void onClickBuild(View view) {
 
@@ -179,7 +193,7 @@ public class MonthFragment extends Fragment{
                 month = String.valueOf(mTabLayoutMonth.getSelectedTabPosition()+1);
                 monthcallback.sendmonthtoMainactivity(month);
                // Toast.makeText(mContext, month,Toast.LENGTH_SHORT).show();
-                if (mTabLayoutMonth.getTabAt(1).isSelected()){
+                if (mTabLayoutMonth.getTabAt(index).isSelected()){
 
                    //Toast.makeText(getActivity(),getyear,Toast.LENGTH_SHORT).show();
 
@@ -211,18 +225,18 @@ public class MonthFragment extends Fragment{
         //单数月份要写一个框架--->signalMonthCellFragment
         //双数月份写另一个框架---->evenMonthCellFragment
         //2月份单独一个框架--->FebFragment
-        SingalMonthCellFragment fragment1= SingalMonthCellFragment.newInstance("1月", "");
+        fragment1 = SingalMonthCellFragment.newInstance("1月", "");
         fragment2=TwentyeightDayFragment.newInstance("2月","");
-        SingalMonthCellFragment fragment3= SingalMonthCellFragment.newInstance("3月", "");
-        EvenMonthCellFragment fragment4= EvenMonthCellFragment.newInstance("4月", "");
-        SingalMonthCellFragment fragment5= SingalMonthCellFragment.newInstance("5月", "");
-        EvenMonthCellFragment fragment6= EvenMonthCellFragment.newInstance("6月", "");
-        SingalMonthCellFragment fragment7= SingalMonthCellFragment.newInstance("7月", "");
-        SingalMonthCellFragment fragment8= SingalMonthCellFragment.newInstance("8月", "");
-        EvenMonthCellFragment fragment9= EvenMonthCellFragment.newInstance("9月", "");
-        SingalMonthCellFragment fragment10= SingalMonthCellFragment.newInstance("10月", "");
-        EvenMonthCellFragment fragment11= EvenMonthCellFragment.newInstance("11月", "");
-        SingalMonthCellFragment fragment12= SingalMonthCellFragment.newInstance("12月", "");
+        fragment3 = SingalMonthCellFragment.newInstance("3月", "");
+        fragment4 = EvenMonthCellFragment.newInstance("4月", "");
+        fragment5 = SingalMonthCellFragment.newInstance("5月", "");
+        fragment6 = EvenMonthCellFragment.newInstance("6月", "");
+        fragment7 = SingalMonthCellFragment.newInstance("7月", "");
+        fragment8 = SingalMonthCellFragment.newInstance("8月", "");
+        fragment9 = EvenMonthCellFragment.newInstance("9月", "");
+        fragment10 = SingalMonthCellFragment.newInstance("10月", "");
+        fragment11 = EvenMonthCellFragment.newInstance("11月", "");
+        fragment12 = SingalMonthCellFragment.newInstance("12月", "");
         fragment2_2 = TewntynineDayFragment.newInstance("2月","");
 
         fragmentListMonth.add(fragment1);
