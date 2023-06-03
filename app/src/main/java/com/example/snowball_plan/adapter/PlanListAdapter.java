@@ -218,7 +218,7 @@ public class PlanListAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 editDialog.show();
-                editDialog.setContentView(R.layout.edit_dialog);
+                editDialog.setContentView(R.layout.activity_day);
 
                 add = editDialog.findViewById(R.id.add);
                 add.setOnClickListener(this::onClickEdit);

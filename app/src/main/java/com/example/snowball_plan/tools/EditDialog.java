@@ -24,7 +24,7 @@ public class EditDialog extends Dialog {
 //    private ImageView add;
     public EditDialog(@NonNull Context context) {
         super(context);
-        setContentView(R.layout.edit_dialog);
+        setContentView(R.layout.activity_day);
 
     }
 
